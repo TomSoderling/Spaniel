@@ -1,12 +1,16 @@
-﻿using Xamarin;
+﻿using System.Linq;
+using Microsoft.AppCenter;
+using Microsoft.AppCenter.Analytics;
+using Microsoft.AppCenter.Crashes;
+using WebServiceDashboard.Pages;
+using WebServiceDashboard.Services;
+using WebServiceDashboard.Shared.ViewModels;
+using WebServiceDashboard.ViewModels;
+using Xamarin;
 using Xamarin.Forms;
 using Xamarin.Forms.PlatformConfiguration.iOSSpecific;
 using Xamarin.Forms.Xaml;
-using WebServiceDashboard.Pages;
-using WebServiceDashboard.Services;
-using WebServiceDashboard.ViewModels;
-using WebServiceDashboard.Shared.ViewModels;
-using System.Linq;
+
 
 [assembly: XamlCompilation (XamlCompilationOptions.Compile)] // use compiled XAML for the entire app
 namespace WebServiceDashboard
@@ -25,11 +29,20 @@ namespace WebServiceDashboard
         {
             InitializeComponent();
 
+
+            // Start the VS App Center SDK
+            // TODO: Does App Center provide seperate Debug/Release SDK app secrets like Xamarin Insights did?
+            AppCenter.Start("ios=8e88ba66-ca1e-4bfe-a0ed-8cba1480f183;" + 
+                            "android=d3408e78-bd64-4682-b501-da734f01802e;",
+                            typeof(Analytics), typeof(Crashes));
+
+
+
             // This may not be good practice - it's only here to help me get the iOS 3D touch quick actions to work
             DependencyServiceWrapperProperty = new DependencyServiceWrapper();
 
             // Display App as Master/Detail only on non-phone devices
-            if (Device.Idiom == TargetIdiom.Phone)
+            if (Xamarin.Forms.Device.Idiom == TargetIdiom.Phone)
             {
                 // pass the dependency service into the Main page
                 //var phoneMainPage = new MainPagePhone(new DependencyServiceWrapper()); // before DependencyServiceWrapperProperty
@@ -63,7 +76,7 @@ namespace WebServiceDashboard
             base.OnSleep();
 
             // Clean up response bodies when app is backgrounded
-            if (Device.Idiom == TargetIdiom.Tablet)
+            if (Xamarin.Forms.Device.Idiom == TargetIdiom.Tablet)
             {
                 // Look at the Master page for the ViewModel in the BindingContext
                 var mainPage = Application.Current.MainPage as MasterDetailPage;
@@ -80,7 +93,7 @@ namespace WebServiceDashboard
                     ((ProjectViewModel)bc).CleanUpResponseBodies.Execute(null);
                 }
             }
-            else if (Device.Idiom == TargetIdiom.Phone)
+            else if (Xamarin.Forms.Device.Idiom == TargetIdiom.Phone)
             {
                 var navPage = Application.Current.MainPage as Xamarin.Forms.NavigationPage;
                 var bc = navPage.CurrentPage.BindingContext;

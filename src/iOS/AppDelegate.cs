@@ -1,16 +1,15 @@
-﻿using Foundation;
+﻿using System;
+using System.IO;
+using System.Linq;
+using System.Threading.Tasks;
+using System.Xml.Linq;
+using Foundation;
 using UIKit;
-using Xamarin.Forms;
+using WebServiceDashboard.Pages;
+using WebServiceDashboard.Shared.Data;
 using WebServiceDashboard.Shared.Services;
 using WebServiceDashboard.ViewModels;
-using System.Linq;
-using System.Collections.Generic;
-using System;
-using WebServiceDashboard.Shared.Data;
-using System.IO;
-using System.Xml.Linq;
-using WebServiceDashboard.Pages;
-using System.Threading.Tasks;
+using Xamarin.Forms;
 
 namespace WebServiceDashboard.iOS
 {
@@ -48,7 +47,6 @@ namespace WebServiceDashboard.iOS
 //            #if DEBUG
 //                new Continuous.Server.HttpServer(this).Run();
 //            #endif
-
 
 
             // iOS project plist is set to hide status bar on app load, this will display it again
