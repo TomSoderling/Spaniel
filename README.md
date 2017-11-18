@@ -1,5 +1,5 @@
 # Spaniel
-An app for giving your RESTful web service endpoints a health checkup
+ A health checkup app for your RESTful web service endpoints
 
 ## Known Limitations: 
  - Endpoint results from quick actions disappear after going back to ProjectList page and stay gone till app is force-closed
