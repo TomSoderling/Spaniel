@@ -1,5 +1,5 @@
 # Spaniel
- A health checkup app for your RESTful web service endpoints
+Spaniel is a Xamarin.Forms mobile app for iOS and Android designed to allow you to run health checkups on your RESTful web service endpoints
 
 
 ## Known Limitations 
@@ -9,7 +9,8 @@
 
 
 ## Build Status 
-iOS [![Build status](https://build.appcenter.ms/v0.1/apps/8edd5bde-f44e-4474-89d8-7c13fbb9f365/branches/master/badge)](https://appcenter.ms)
-Android [![Build status](https://build.appcenter.ms/v0.1/apps/d6ce6820-4683-4d5f-ad51-2f2e633453ed/branches/master/badge)](https://appcenter.ms)
+| iOS           | Android       |
+| ------------- | ------------- |
+| [![Build status](https://build.appcenter.ms/v0.1/apps/8edd5bde-f44e-4474-89d8-7c13fbb9f365/branches/master/badge)](https://appcenter.ms) | [![Build status](https://build.appcenter.ms/v0.1/apps/d6ce6820-4683-4d5f-ad51-2f2e633453ed/branches/master/badge)](https://appcenter.ms)  |
 
 Thank you Visual Studio App Center!
