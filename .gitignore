@@ -1,0 +1,12 @@
+src/WebServiceDashboard/obj
+src/packages
+src/iOS/obj
+src/Droid/bin
+src/iOS/bin
+src/UITests/obj
+src/UITests/bin
+src/WebServiceDashboard/bin
+src/UnitTests/bin
+src/WebServiceDashboard.Shared/obj
+src/UnitTests/obj
+src/WebServiceDashboard.Shared/bin
