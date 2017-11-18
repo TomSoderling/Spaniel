@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage
+	xmlns="http://xamarin.com/schemas/2014/forms" 
+    xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
+    xmlns:local="clr-namespace:WebServiceDashboard.Controls;assembly=WebServiceDashboard"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    ios:Page.UseSafeArea="true"
+	x:Class="WebServiceDashboard.Pages.EndPointListPage"
+	Title="{Binding SelectedProject.Name}">
+
+	<ContentPage.ToolbarItems>
+        <ToolbarItem Text="+" Command="{Binding ActionMenu}" StyleId="toolbarMenuButton" />
+    </ContentPage.ToolbarItems>
+
+    <StackLayout Orientation="Vertical">
+    	<Label Text="{Binding ErrorText}" 
+    		   BackgroundColor="{Binding ErrorLabelColor}"
+    		   TextColor="White"
+    		   XAlign="Center"
+			   YAlign="Center"
+    		   HeightRequest="50"
+			   IsVisible="{Binding IsError}" />
+
+		<SearchBar Text="{Binding SearchText}" SearchCommand="{Binding Search}" StyleId="endPointListPageSearchBox" />
+
+		<ListView x:Name="endPointListView"
+				  StyleId="endPointListView"
+				  ItemsSource="{Binding FilteredEndPoints}"
+				  SelectedItem="{Binding SelectedEndPoint, Mode=TwoWay}"
+				  ItemTapped="OnItemTapped"
+				  SeparatorVisibility="None"
+				  CachingStrategy="RetainElement">
+			<ListView.ItemTemplate>
+				<DataTemplate>
+					<ImageCell x:Name="textCell"
+							   Text="{Binding Name}"
+							   Detail="{Binding Status, StringFormat='Status: {0:}'}"
+							   ImageSource="{Binding Icon}">
+						<TextCell.ContextActions>
+							<MenuItem Text="Delete" 
+							   		  BindingContext="{Binding Source={x:Reference endPointListView}, Path=BindingContext}"
+							   		  Command="{Binding DeleteEndPoint}"
+							   		  IsDestructive="true"
+							   		  CommandParameter="{Binding Source={x:Reference textCell}, Path=BindingContext}" />
+				   		  	<MenuItem Text="Duplicate" 
+							   		  BindingContext="{Binding Source={x:Reference endPointListView}, Path=BindingContext}"
+							   		  Command="{Binding DuplicateEndPoint}"
+							   		  CommandParameter="{Binding Source={x:Reference textCell}, Path=BindingContext}" />
+						</TextCell.ContextActions>
+					</ImageCell>
+				</DataTemplate>
+			</ListView.ItemTemplate>
+		</ListView>
+
+		<StackLayout IsVisible="{Binding IsRunningEndPoints}">
+			<local:ColoredProgressBar Progress="{Binding RunProgress}" BarColor="{StaticResource SpanielYellow}" TrackColor="{StaticResource SpanielDarkYellow}" />
+		</StackLayout>
+	</StackLayout>
+
+</ContentPage>

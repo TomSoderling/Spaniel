@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView 
+	xmlns="http://xamarin.com/schemas/2014/forms" 
+	xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+	x:Class="WebServiceDashboard.Controls.PaddedLabel"
+	BackgroundColor="{StaticResource SpanielLightGrey}"
+	Padding="7, 0, 7, 0"
+	VerticalOptions="Center"
+	HeightRequest="35">
+
+	<ContentView x:Name="root">
+		<Label Text="{Binding Text}" Style="{StaticResource LabelStyle}" />
+	</ContentView>
+
+</ContentView>

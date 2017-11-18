@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage 
+	xmlns="http://xamarin.com/schemas/2014/forms" 
+    xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core" 
+    xmlns:local="clr-namespace:WebServiceDashboard.Controls;assembly=WebServiceDashboard"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+    ios:Page.UseSafeArea="true"
+    x:Class="WebServiceDashboard.Pages.EndPointDetailPage"
+	Title="EndPoint Details">
+
+	<ContentPage.ToolbarItems>
+        <ToolbarItem x:Name="toolbarButton" Order="Primary" Text="{Binding ToolbarButtonText}" Command="{Binding RunOrSave}" StyleId="endPointDetailToolbarButton" />
+    </ContentPage.ToolbarItems>
+
+    <ScrollView x:Name="scrollView" StyleId="endPointDetailScrollView" Orientation="Vertical" BindingContext="{Binding .}" BackgroundColor="{StaticResource SpanielLightestGrey}">
+	    <StackLayout Orientation="Vertical">
+
+
+	    <Label Text="{Binding ErrorText}" 
+    		   BackgroundColor="{Binding ErrorLabelColor}"
+    		   TextColor="White"
+    		   XAlign="Center"
+			   YAlign="Center"
+    		   HeightRequest="50"
+			   IsVisible="{Binding IsError}" />
+
+
+	    	<!-- Status Grid Box -->
+			<StackLayout x:Name="statusGridStackLayout">
+		    	<StackLayout.Style>
+					<OnIdiom x:TypeArguments="Style" Tablet="{StaticResource StatusGridStackLayout}" Phone="{StaticResource StatusGridStackLayout_Phone}" />
+				</StackLayout.Style>
+
+	    		<Grid x:Name="statusGrid" BindingContext="{Binding SelectedEndPoint}" Style="{StaticResource StatusGrid}">
+	    			<Grid.RowDefinitions>
+						<RowDefinition Height="Auto" />
+					</Grid.RowDefinitions>
+					<Grid.ColumnDefinitions>
+						<ColumnDefinition Width="135" />
+						<ColumnDefinition Width="*" />
+					</Grid.ColumnDefinitions>
+
+					<Image Grid.Row="0" Grid.Column="0" Source="{Binding StatusIcon}" HorizontalOptions="Start" />
+
+					<StackLayout Grid.Row="0" Grid.Column="1" VerticalOptions="Center">
+						<Label x:Name="statusGridHeaderLabel" Text="{Binding Name}">
+							<Label.Style>
+								<OnIdiom x:TypeArguments="Style" Tablet="{StaticResource StatusGridHeaderLabel}" Phone="{StaticResource StatusGridHeaderLabel_Phone}" />
+							</Label.Style>
+						</Label>
+						<Label Text="{Binding LastTestedValue}" BindingContext="{Binding Source={x:Reference scrollView}, Path=BindingContext}" Style="{StaticResource StatusGridLabel}" StyleId="endPointLastTestedStatus" />
+						<Label Text="{Binding HttpVerb}" Style="{StaticResource StatusGridLabel}" />
+					</StackLayout>
+	    		</Grid>
+    		</StackLayout>
+
+    		<!-- EndPoint Details Grid -->
+			<Grid x:Name="endPointDetailsGrid" BindingContext="{Binding SelectedEndPoint}">
+				<Grid.Style>
+					<OnIdiom x:TypeArguments="Style" Tablet="{StaticResource EndPointDetailsGrid}" Phone="{StaticResource EndPointDetailsGrid_Phone}" />
+				</Grid.Style>
+				<Grid.RowDefinitions>
+					<RowDefinition Height="Auto" />
+					<RowDefinition Height="Auto" />
+					<RowDefinition Height="Auto" />
+					<RowDefinition Height="Auto" />
+				</Grid.RowDefinitions>
+				<Grid.ColumnDefinitions>
+					<ColumnDefinition Width="Auto" />
+					<ColumnDefinition Width="*" />
+				</Grid.ColumnDefinitions>
+
+				<local:PaddedLabel Grid.Row="0" Grid.Column="0" Text="Name" />
+				<Entry Grid.Row="0" Grid.Column="1" Text="{Binding Name}" Style="{StaticResource EntryStyle}" TextChanged="OnTextChanged" StyleId="endPointNameTextbox" />
+
+				<local:PaddedLabel Grid.Row="1" Grid.Column="0" Text="URI" />
+				<Entry Grid.Row="1" Grid.Column="1" Text="{Binding EndPointURI}" Style="{StaticResource EntryStyle}" TextChanged="OnTextChanged" StyleId="endPointURITextbox" />
+
+				<local:PaddedLabel Grid.Row="2" Grid.Column="0" Text="Parameter Values" />
+				<Entry Grid.Row="2" Grid.Column="1" Text="{Binding ParameterFillIn}" Style="{StaticResource EntryStyle}" TextChanged="OnTextChanged" Placeholder="Comma seperated" StyleId="endPointParameterTextbox" />
+
+				<local:PaddedLabel Grid.Row="3" Grid.Column="0" Text="Filter Definition" />
+				<Entry Grid.Row="3" Grid.Column="1" Text="{Binding FilterDefinition}" Style="{StaticResource EntryStyle}" TextChanged="OnTextChanged" StyleId="endPointFilterDefTextbox"/>
+			</Grid>
+
+			<!-- Results List -->
+			<StackLayout x:Name="resultListStackLayout">
+				<StackLayout.Style>
+					<OnIdiom x:TypeArguments="Style" Tablet="{StaticResource EndPointResultListStackLayout}" Phone="{StaticResource EndPointResultListStackLayout_Phone}" />
+				</StackLayout.Style>
+
+					<ListView x:Name="resultsListView"
+							  StyleId="resultsListView"
+							  ItemsSource="{Binding SelectedEndPoint.Results}" 
+							  SelectedItem="{Binding SelectedResult, Mode=TwoWay}" 
+							  ItemTapped="OnItemTapped" 
+							  IsVisible="{Binding HasResults}"
+							  SeparatorVisibility="None">
+						<ListView.Header>
+							<Label Text="  Results" Style="{StaticResource ListHeaderStyle}" />
+						</ListView.Header>
+						<ListView.ItemTemplate>
+							<DataTemplate>
+								<ImageCell x:Name="textCell"
+										   Text="{Binding HttpCode, StringFormat='Response: {0:} ({0:d})'}"
+										   Detail="{Binding ResponseTimeMilliseconds, StringFormat='Response Time: {0:} ms'}"
+										   ImageSource="{Binding Icon}">
+								</ImageCell>
+							</DataTemplate>
+						</ListView.ItemTemplate>
+					</ListView>
+				</StackLayout>
+		</StackLayout>
+	</ScrollView>
+
+</ContentPage>

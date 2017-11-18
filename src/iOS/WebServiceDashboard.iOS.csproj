@@ -1,0 +1,273 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Xamarin.Forms.2.5.0.77107\build\netstandard1.0\Xamarin.Forms.props" Condition="Exists('..\packages\Xamarin.Forms.2.5.0.77107\build\netstandard1.0\Xamarin.Forms.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">iPhoneSimulator</Platform>
+    <ProjectTypeGuids>{FEACFBD2-3405-455C-9665-78FE426C6842};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <ProjectGuid>{AA09BEA6-B2A7-4C10-A152-02DB52B444BC}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>WebServiceDashboard.iOS</RootNamespace>
+    <IPhoneResourcePrefix>Resources</IPhoneResourcePrefix>
+    <AssemblyName>WebServiceDashboardiOS</AssemblyName>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|iPhoneSimulator' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\iPhoneSimulator\Debug</OutputPath>
+    <DefineConstants>DEBUG;ENABLE_TEST_CLOUD;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+    <MtouchArch>i386</MtouchArch>
+    <MtouchLink>None</MtouchLink>
+    <MtouchDebug>true</MtouchDebug>
+    <MtouchProfiling>true</MtouchProfiling>
+    <CodesignKey>iPhone Developer</CodesignKey>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhone' ">
+    <DebugType>full</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\iPhone\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
+    <MtouchArch>ARMv7, ARM64</MtouchArch>
+    <ConsolePause>false</ConsolePause>
+    <CodesignKey>iPhone Developer</CodesignKey>
+    <BuildIpa>true</BuildIpa>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhoneSimulator' ">
+    <DebugType>full</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\iPhoneSimulator\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <MtouchArch>i386</MtouchArch>
+    <ConsolePause>false</ConsolePause>
+    <MtouchLink>None</MtouchLink>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|iPhone' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\iPhone\Debug</OutputPath>
+    <DefineConstants>DEBUG;ENABLE_TEST_CLOUD;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+    <MtouchArch>ARMv7, ARM64</MtouchArch>
+    <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
+    <MtouchProfiling>false</MtouchProfiling>
+    <CodesignKey>iPhone Developer: Tom Soderling (GGX3C3U4HM)</CodesignKey>
+    <MtouchDebug>true</MtouchDebug>
+    <IpaPackageName>
+    </IpaPackageName>
+    <BuildIpa>true</BuildIpa>
+    <CodesignProvision>Wildcard Prov Profile</CodesignProvision>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="Xamarin.iOS" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="ModernHttpClient">
+      <HintPath>..\packages\modernhttpclient.2.4.2\lib\Xamarin.iOS10\ModernHttpClient.dll</HintPath>
+    </Reference>
+    <Reference Include="Plugin.Connectivity">
+      <HintPath>..\packages\Xam.Plugin.Connectivity.2.0.2\lib\Xamarin.iOS10\Plugin.Connectivity.dll</HintPath>
+    </Reference>
+    <Reference Include="Plugin.Connectivity.Abstractions">
+      <HintPath>..\packages\Xam.Plugin.Connectivity.2.0.2\lib\Xamarin.iOS10\Plugin.Connectivity.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Forms.Core">
+      <HintPath>..\packages\Xamarin.Forms.2.5.0.77107\lib\Xamarin.iOS10\Xamarin.Forms.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Forms.Platform">
+      <HintPath>..\packages\Xamarin.Forms.2.5.0.77107\lib\Xamarin.iOS10\Xamarin.Forms.Platform.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Forms.Platform.iOS">
+      <HintPath>..\packages\Xamarin.Forms.2.5.0.77107\lib\Xamarin.iOS10\Xamarin.Forms.Platform.iOS.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Forms.Xaml">
+      <HintPath>..\packages\Xamarin.Forms.2.5.0.77107\lib\Xamarin.iOS10\Xamarin.Forms.Xaml.dll</HintPath>
+    </Reference>
+    <Reference Include="PLCrashReporterUnifiedBinding">
+      <HintPath>..\packages\Xamarin.Insights.1.12.3\lib\Xamarin.iOS10\PLCrashReporterUnifiedBinding.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Xamarin.Insights">
+      <HintPath>..\packages\Xamarin.Insights.1.12.3\lib\Xamarin.iOS10\Xamarin.Insights.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.IO.Compression" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.10.0.3\lib\netstandard1.3\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Calabash">
+      <HintPath>..\packages\Xamarin.TestCloud.Agent.0.21.3\lib\Xamarin.iOS\Calabash.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\WebServiceDashboard\WebServiceDashboard.csproj">
+      <Project>{C5D83B8A-EC64-4C31-BE2A-A17991C98090}</Project>
+      <Name>WebServiceDashboard</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\WebServiceDashboard.Shared\WebServiceDashboard.Shared.csproj">
+      <Project>{36DA9EAC-82A8-433B-9227-49D1ADC3D71E}</Project>
+      <Name>WebServiceDashboard.Shared</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\icn_EndpointFailed.png" />
+    <BundleResource Include="Resources\icn_EndpointFailed%402x.png" />
+    <BundleResource Include="Resources\icn_EndpointFailed%403x.png" />
+    <BundleResource Include="Resources\icn_EndpointInProgress.png" />
+    <BundleResource Include="Resources\icn_EndpointInProgress%402x.png" />
+    <BundleResource Include="Resources\icn_EndpointInProgress%403x.png" />
+    <BundleResource Include="Resources\icn_EndpointSuccessful.png" />
+    <BundleResource Include="Resources\icn_EndpointSuccessful%402x.png" />
+    <BundleResource Include="Resources\icn_EndpointSuccessful%403x.png" />
+    <BundleResource Include="Resources\icn_ProjectFailed.png" />
+    <BundleResource Include="Resources\icn_ProjectFailed%402x.png" />
+    <BundleResource Include="Resources\icn_ProjectFailed%403x.png" />
+    <BundleResource Include="Resources\icn_ProjectNew.png" />
+    <BundleResource Include="Resources\icn_ProjectNew%402x.png" />
+    <BundleResource Include="Resources\icn_ProjectNew%403x.png" />
+    <BundleResource Include="Resources\icn_ProjectPartial.png" />
+    <BundleResource Include="Resources\icn_ProjectPartial%402x.png" />
+    <BundleResource Include="Resources\icn_ProjectPartial%403x.png" />
+    <BundleResource Include="Resources\icn_ProjectPassed.png" />
+    <BundleResource Include="Resources\icn_ProjectPassed%402x.png" />
+    <BundleResource Include="Resources\icn_ProjectPassed%403x.png" />
+    <BundleResource Include="Resources\icn_EndPointSelected.png" />
+    <BundleResource Include="Resources\icn_EndPointSelected%402x.png" />
+    <BundleResource Include="Resources\icn_EndPointSelected%403x.png" />
+    <BundleResource Include="Resources\icn_EndpointFailedDetails.png" />
+    <BundleResource Include="Resources\icn_EndpointFailedDetails%402x.png" />
+    <BundleResource Include="Resources\icn_EndpointFailedDetails%403x.png" />
+    <BundleResource Include="Resources\icn_EndpointInProgressDetail.png" />
+    <BundleResource Include="Resources\icn_EndpointInProgressDetail%402x.png" />
+    <BundleResource Include="Resources\icn_EndpointInProgressDetail%403x.png" />
+    <BundleResource Include="Resources\icn_EndpointNewDetail.png" />
+    <BundleResource Include="Resources\icn_EndpointNewDetail%402x.png" />
+    <BundleResource Include="Resources\icn_EndpointNewDetail%403x.png" />
+    <BundleResource Include="Resources\icn_EndpointSuccessfulDetail.png" />
+    <BundleResource Include="Resources\icn_EndpointSuccessfulDetail%402x.png" />
+    <BundleResource Include="Resources\icn_EndpointSuccessfulDetail%403x.png" />
+    <BundleResource Include="Resources\icn_NotSelected.png" />
+    <BundleResource Include="Resources\icn_NotSelected%402x.png" />
+    <BundleResource Include="Resources\icn_NotSelected%403x.png" />
+    <BundleResource Include="Resources\icn_ProjectFailedDetail.png" />
+    <BundleResource Include="Resources\icn_ProjectFailedDetail%402x.png" />
+    <BundleResource Include="Resources\icn_ProjectFailedDetail%403x.png" />
+    <BundleResource Include="Resources\icn_ProjectNewDetail.png" />
+    <BundleResource Include="Resources\icn_ProjectNewDetail%402x.png" />
+    <BundleResource Include="Resources\icn_ProjectNewDetail%403x.png" />
+    <BundleResource Include="Resources\icn_ProjectPartialDetail.png" />
+    <BundleResource Include="Resources\icn_ProjectPartialDetail%402x.png" />
+    <BundleResource Include="Resources\icn_ProjectPartialDetail%403x.png" />
+    <BundleResource Include="Resources\icn_ProjectPassedDetail.png" />
+    <BundleResource Include="Resources\icn_ProjectPassedDetail%402x.png" />
+    <BundleResource Include="Resources\icn_ProjectPassedDetail%403x.png" />
+    <BundleResource Include="Resources\icn_Selected.png" />
+    <BundleResource Include="Resources\icn_Selected%402x.png" />
+    <BundleResource Include="Resources\icn_Selected%403x.png" />
+    <BundleResource Include="Resources\Watermark-Landscape.png" />
+    <BundleResource Include="Resources\AppIcon-64x64.png" />
+    <BundleResource Include="Resources\AppIcon-320x320.png" />
+    <BundleResource Include="Resources\LaunchScreenImage.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Info.plist" />
+    <None Include="Entitlements.plist" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Main.cs" />
+    <Compile Include="AppDelegate.cs" />
+    <Compile Include="ProjectRepository.cs" />
+    <Compile Include="Renderers\ColoredProgressBarRenderer.cs" />
+    <Compile Include="Services\ShareService_iOS.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
+  <ItemGroup>
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons.appiconset\Contents.json">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\Spaniel_Images.launchimage\Contents.json">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\Spaniel_Images.launchimage\Default.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons.appiconset\AppIcon-60%402x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons.appiconset\AppIcon-60%403x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons.appiconset\AppIcon-72.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons.appiconset\AppIcon-72%402x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons.appiconset\AppIcon-76.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons.appiconset\AppIcon-76%402x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons.appiconset\AppIcon-Small-40.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons.appiconset\AppIcon-Small-40%402x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons.appiconset\AppIcon-Small-50.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons.appiconset\AppIcon-Small-50%402x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons.appiconset\AppIcon-Small.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons.appiconset\AppIcon-Small%402x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons.appiconset\AppIcon-Small%403x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons.appiconset\AppIcon.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons.appiconset\AppIcon%402x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\Spaniel_Images.launchimage\Default-Portrait-736h%403x.png" />
+    <ImageAsset Include="Resources\Images.xcassets\Spaniel_Images.launchimage\Default-667h%402x.png" />
+    <ImageAsset Include="Resources\Images.xcassets\Spaniel_Images.launchimage\Default-Landscape-736h%403x.png" />
+    <ImageAsset Include="Resources\Images.xcassets\Spaniel_Images.launchimage\Default%402x.png" />
+    <ImageAsset Include="Resources\Images.xcassets\Spaniel_Images.launchimage\Portrait_640x1136.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ITunesArtwork Include="iTunesArtwork" />
+    <ITunesArtwork Include="iTunesArtwork%402x" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Renderers\" />
+    <Folder Include="Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <InterfaceDefinition Include="LaunchScreen.storyboard" />
+  </ItemGroup>
+  <Import Project="..\packages\Xamarin.Forms.2.5.0.77107\build\netstandard1.0\Xamarin.Forms.targets" Condition="Exists('..\packages\Xamarin.Forms.2.5.0.77107\build\netstandard1.0\Xamarin.Forms.targets')" />
+  <Import Project="..\packages\Xamarin.Insights.1.12.3\build\Xamarin.iOS10\Xamarin.Insights.targets" Condition="Exists('..\packages\Xamarin.Insights.1.12.3\build\Xamarin.iOS10\Xamarin.Insights.targets')" />
+</Project>

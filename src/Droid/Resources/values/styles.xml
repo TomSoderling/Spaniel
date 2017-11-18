@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<resources>
+	<!-- Style for devices running Android v4 (Jelly Bean) and older -->
+
+	<!-- Inherit from dark theme -->
+    <style name="SpanielTheme" parent="@android:style/Theme.Holo">
+        <item name="android:actionBarStyle">@style/SpanielActionBar</item>
+        <item name="android:actionMenuTextColor">@color/SpanielYellow</item>
+
+        <item name="android:textSelectHandleLeft">@drawable/spanieltheme_text_select_handle_left</item>
+		<item name="android:textSelectHandleRight">@drawable/spanieltheme_text_select_handle_right</item>
+    	<item name="android:textSelectHandle">@drawable/spanieltheme_text_select_handle_middle</item>
+    </style>
+
+    <style name="SpanielActionBar" parent="@android:style/Widget.Holo.ActionBar">
+        <item name="android:background">@color/SpanielDarkGrey</item> <!-- Not really needed, this is set in the code. SpanielColors.NavBarBackground property -->
+        <item name="android:titleTextStyle">@style/SpanielActionBarTitleText</item>
+    </style>
+
+    <style name="SpanielActionBarTitleText" parent="@android:style/TextAppearance.Holo.Widget.ActionBar.Title">
+        <item name="android:textColor">@color/SpanielYellow</item>
+    </style>
+
+</resources>

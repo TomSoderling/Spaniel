@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage 
+	xmlns="http://xamarin.com/schemas/2014/forms" 
+    xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    ios:Page.UseSafeArea="true"
+    x:Class="WebServiceDashboard.Pages.ResultDetailPage"
+	Title="Result Details">
+
+	<ScrollView x:Name="scrollView" Orientation="Vertical" BindingContext="{Binding .}" BackgroundColor="{StaticResource SpanielLightestGrey}">
+	 	<StackLayout Orientation="Vertical">
+
+	 		<!-- Detail Status Box -->
+	 		<StackLayout x:Name="statusGridStackLayout">
+	 			<StackLayout.Style>
+					<OnIdiom x:TypeArguments="Style" Tablet="{StaticResource StatusGridStackLayout}" Phone="{StaticResource StatusGridStackLayout_Phone}" />
+				</StackLayout.Style>
+
+				<Grid BindingContext="{Binding SelectedResult}" Style="{StaticResource StatusGrid}">
+					<Grid.RowDefinitions>
+						<RowDefinition Height="Auto" />
+					</Grid.RowDefinitions>
+					<Grid.ColumnDefinitions>
+						<ColumnDefinition Width="135" />
+						<ColumnDefinition Width="*" />
+					</Grid.ColumnDefinitions>
+
+					<Image Grid.Row="0" Grid.Column="0" Source="{Binding StatusIcon}" HorizontalOptions="Start" />
+
+					<StackLayout Grid.Row="0" Grid.Column="1" VerticalOptions="Center">
+						<Label x:Name="statusGridHeaderLabel" Text="{Binding HttpCode, StringFormat='{0:} ({0:d})'}">
+
+<!-- After updating the Xamarin.Forms packages, this build time error started happening --> 
+<!-- Error: Position 33:9. No property, bindable property, or event found for 'Text', or mismatching type between value and property. -->
+<!--							<OnIdiom x:TypeArguments="Style" Tablet="{StaticResource StatusGridHeaderLabel}" Phone="{StaticResource StatusGridHeaderLabel_Phone}" />-->
+
+                        </Label>
+						<Label Text="{Binding ResponseTimeMilliseconds, StringFormat='{0:} ms'}" Style="{StaticResource StatusGridLabel}" />
+						<Label Text="{Binding RunDate, StringFormat='{0:MM/dd/yyyy h:mm:ss tt}'}" Style="{StaticResource StatusGridLabel}" />
+					</StackLayout>
+				</Grid>
+			</StackLayout>
+
+			<StackLayout x:Name="responseBodyStackLayout" IsVisible="{Binding HasResponseBody}">
+				<StackLayout.Style>
+					<OnIdiom x:TypeArguments="Style" Tablet="{StaticResource ResponseBodyStackLayout}" Phone="{StaticResource ResponseBodyStackLayout_Phone}" />
+				</StackLayout.Style>
+
+				<Label Text="  Response Body" Style="{StaticResource ListHeaderStyle}" />
+				<Label Text="{Binding ResponseBody, StringFormat='{0:}'}" BindingContext="{Binding SelectedResult}" Style="{StaticResource ResponseBodyLabel}" />
+			</StackLayout>
+
+			<StackLayout x:Name="exceptionMessageStackLayout" IsVisible="{Binding HasExceptionMessage}">
+				<StackLayout.Style>
+					<OnIdiom x:TypeArguments="Style" Tablet="{StaticResource ResponseBodyStackLayout}" Phone="{StaticResource ResponseBodyStackLayout_Phone}" />
+				</StackLayout.Style>
+
+				<Label Text="  Exception Message" Style="{StaticResource ListHeaderStyle}" />
+				<Label Text="{Binding ExceptionMessage, StringFormat='{0:}'}" BindingContext="{Binding SelectedResult}" Style="{StaticResource ResponseBodyLabel}" />
+			</StackLayout>
+
+		</StackLayout>
+	</ScrollView>
+
+</ContentPage>

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage 
+	xmlns="http://xamarin.com/schemas/2014/forms" 
+    xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    ios:Page.UseSafeArea="true"
+	x:Class="WebServiceDashboard.Pages.ProjectListPage"
+	Title="Projects">
+
+	<ContentPage.ToolbarItems>
+        <ToolbarItem StyleId="addProjectButton" Text="Add" Command="{Binding AddProject}" />
+    </ContentPage.ToolbarItems>
+
+    <StackLayout Orientation="Vertical">
+	    <Label Text="{Binding ErrorText}" 
+    		   BackgroundColor="{Binding ErrorLabelColor}"
+    		   TextColor="White"
+    		   VerticalTextAlignment="Center"
+    		   HorizontalTextAlignment="Center"
+    		   HeightRequest="50"
+			   IsVisible="{Binding IsError}" />
+
+		<ListView x:Name="projectListView" 
+				  StyleId="projectListView"
+				  ItemsSource="{Binding Projects}"
+				  SelectedItem="{Binding SelectedProject, Mode=TwoWay}"
+				  ItemTapped="OnItemTapped"
+				  ItemSelected="OnItemTapped"
+				  SeparatorVisibility="None">
+			<ListView.ItemTemplate>
+				<DataTemplate>
+					<ImageCell x:Name="textCell"
+							   Text="{Binding Name}"
+							   Detail="{Binding LastTestRun, StringFormat='Last Run:{0: ddd M/dd/yyyy h:mm tt}'}" 
+						   	   ImageSource="{Binding Icon}">
+						<TextCell.ContextActions>
+							<MenuItem StyleId="detailsContextAction" 
+									  Text="Details" 
+									  BindingContext="{Binding Source={x:Reference projectListView}, Path=BindingContext}" 
+									  Command="{Binding EditProject}" 
+									  CommandParameter="{Binding Source={x:Reference textCell}, Path=BindingContext}" /> 
+							<MenuItem StyleId="deleteContextAction"
+									  Text="Delete" 
+									  BindingContext="{Binding Source={x:Reference projectListView}, Path=BindingContext}" 
+									  Command="{Binding DeleteProject}" 
+									  CommandParameter="{Binding Source={x:Reference textCell}, Path=BindingContext}"
+									  IsDestructive="true" />
+						</TextCell.ContextActions>
+					</ImageCell>
+				</DataTemplate>
+			</ListView.ItemTemplate>
+		</ListView>
+	</StackLayout>
+
+</ContentPage>

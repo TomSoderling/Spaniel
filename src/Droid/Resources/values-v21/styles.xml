@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<resources>
+	<!-- Style for devices running Android v5 (Lollipop) and newer -->
+ 
+    <!-- Inherit from the Material (Dark) Theme  -->
+    <style name="SpanielTheme" parent="android:Theme.Material">
+
+    	<item name="android:colorPrimary">@color/SpanielDarkGrey</item> <!-- Not really needed, this is set in the code. SpanielColors.NavBarBackground property -->
+    	<item name="android:textColorPrimary">@color/SpanielYellow</item>
+    	<item name="android:colorAccent">@color/SpanielYellow</item>
+
+    </style>
+</resources>

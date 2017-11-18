@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Application 
+	xmlns="http://xamarin.com/schemas/2014/forms" 
+	xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+	x:Class="WebServiceDashboard.App">
+
+
+	<Application.Resources>
+		<ResourceDictionary >
+			<Color x:Key="70PercentGray">#4D4D4D</Color> <!-- used for text color of entry fields -->
+			<Color x:Key="SpanielDarkGrey">#2E2E2E</Color>
+			<Color x:Key="SpanielLightGrey">#E4E4E4</Color>
+			<Color x:Key="SpanielLightestGrey">#F2F2F2</Color>
+			<Color x:Key="SpanielYellow">#FFD200</Color>
+			<Color x:Key="SpanielDarkYellow">#74683D</Color> <!-- used for progress bar track color on iOS. Should look close to the Android default color for this -->
+
+
+			<Style x:Key="LabelStyle" TargetType="Label">
+				<Setter Property="HorizontalTextAlignment" Value="Start" />
+				<Setter Property="VerticalTextAlignment" Value="Center" />
+				<Setter Property="BackgroundColor" Value="{StaticResource SpanielLightGrey}" />
+				<Setter Property="TextColor" Value="Black" />
+			</Style>
+
+			<Style x:Key="EntryStyle" TargetType="Entry">
+				<Setter Property="TextColor" Value="{StaticResource 70PercentGray}" />
+			</Style>
+
+			<Style x:Key="ValueStyle" TargetType="Label" BasedOn="{StaticResource LabelStyle}">
+				<Setter Property="HorizontalTextAlignment" Value="Start" />
+				<Setter Property="TextColor" Value="{StaticResource 70PercentGray}" />
+			</Style>
+
+			<Style x:Key="ListHeaderStyle" TargetType="Label" BasedOn="{StaticResource LabelStyle}">
+				<Setter Property="HeightRequest" Value="40" />
+				<Setter Property="FontAttributes" Value="Bold" />
+			</Style>
+
+
+			<!-- Styles for the status grid/box on detail pages -->
+			<Style x:Key="StatusGridStackLayout" TargetType="StackLayout">
+				<Setter Property="Padding" Value="40, 40, 40, 0" />
+				<Setter Property="BackgroundColor" Value="{StaticResource SpanielLightestGrey}" />
+			</Style>
+
+			<Style x:Key="StatusGrid" TargetType="Grid" >
+				<Setter Property="BackgroundColor" Value="{StaticResource SpanielLightGrey}" />
+				<Setter Property="RowSpacing" Value="5" />
+				<Setter Property="Padding" Value="20, 0, 0, 0" />
+			</Style>
+
+			<Style x:Key="StatusGridLabel" TargetType="Label">
+				<Setter Property="TextColor" Value="Black" />
+			</Style>
+
+			<Style x:Key="StatusGridHeaderLabel" TargetType="Label" BasedOn="{StaticResource StatusGridLabel}">
+				<Setter Property="FontSize" Value="Large" />
+				<Setter Property="FontAttributes" Value="Bold" />
+			</Style>
+
+
+			<!-- Styles for Result Detail Page -->
+			<Style x:Key="ResponseBodyLabel" TargetType="Label">
+				<Setter Property="BackgroundColor" Value="White" />
+				<Setter Property="TextColor" Value="Black" />
+			</Style>
+
+			<Style x:Key="ResponseBodyStackLayout" TargetType="StackLayout">
+				<Setter Property="Padding" Value="40, 24, 40, 32" />
+			</Style>
+
+
+			<!-- Style for the EndPoint Details Grid -->
+			<Style x:Key="EndPointDetailsGrid" TargetType="Grid" >
+				<Setter Property="RowSpacing" Value="6" />
+				<Setter Property="Padding" Value="40, 24, 40, 24" />
+			</Style>
+
+
+			<!-- Style for the EndPoint Results List -->
+			<Style x:Key="EndPointResultListStackLayout" TargetType="StackLayout">
+				<Setter Property="Padding" Value="40, 0, 40, 0" />
+			</Style>
+
+
+
+			<!-- Phone Idiom-Specific Styles -->
+			<Style x:Key="StatusGridStackLayout_Phone" TargetType="StackLayout" BasedOn="{StaticResource StatusGridStackLayout}">
+				<Setter Property="Padding" Value="5, 5, 5, 0" />
+			</Style>
+
+			<Style x:Key="StatusGridHeaderLabel_Phone" TargetType="Label" BasedOn="{StaticResource StatusGridLabel}">
+				<Setter Property="FontAttributes" Value="Bold" />
+			</Style>
+
+			<Style x:Key="EndPointDetailsGrid_Phone" TargetType="Grid" BasedOn="{StaticResource EndPointDetailsGrid}">
+				<Setter Property="Padding" Value="5, 5, 5, 0" />
+			</Style>
+
+			<Style x:Key="EndPointResultListStackLayout_Phone" TargetType="StackLayout">
+				<Setter Property="Padding" Value="5, 5, 5, 0" />
+			</Style>
+
+			<Style x:Key="ResponseBodyStackLayout_Phone" TargetType="StackLayout">
+				<Setter Property="Padding" Value="5, 5, 5, 5" />
+			</Style>
+
+
+		</ResourceDictionary>
+	</Application.Resources>
+
+</Application>
