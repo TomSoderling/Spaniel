@@ -141,12 +141,14 @@ namespace WebServiceDashboard.ViewModels
                     {
                         navService.GoToPageAsync(AppPage.EndPointListPage, SelectedProject, dependencyService).IgnoreResult();
 
+
+                        // TODO: log this with App Center
                         // Keep track of which project the user is using most often, and how many EndPoints are in each Project
-                        Insights.Track("ProjectSelected", new Dictionary<string, string>
-                            {
-                                { "ProjectName", SelectedProject.Name },
-                                { "NumberOfEndPoints", SelectedProject.EndPoints.Count.ToString() }
-                            });
+                        //Insights.Track("ProjectSelected", new Dictionary<string, string>
+                            //{
+                            //    { "ProjectName", SelectedProject.Name },
+                            //    { "NumberOfEndPoints", SelectedProject.EndPoints.Count.ToString() }
+                            //});
                     }
                 }
             }

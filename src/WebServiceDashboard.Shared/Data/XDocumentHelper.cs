@@ -5,7 +5,6 @@ using WebServiceDashboard.Shared.Models;
 using WebServiceDashboard.Shared.Data;
 using System.Linq;
 using System.Collections.Generic;
-using Xamarin;
 
 namespace WebServiceDashboard.Shared.Data
 {
@@ -161,10 +160,11 @@ namespace WebServiceDashboard.Shared.Data
             }
             catch(Exception ex)
             {
-                Insights.Report(ex, new Dictionary<string, string>
-                    {
-                        { "Issue", "Unable to new add project to project.xml document" }
-                    });
+                // TODO: log this with App Center
+                //Insights.Report(ex, new Dictionary<string, string>
+                    //{
+                    //    { "Issue", "Unable to new add project to project.xml document" }
+                    //});
                 return false;
             }
 
@@ -202,10 +202,11 @@ namespace WebServiceDashboard.Shared.Data
             }
             catch(Exception ex)
             {
-                Insights.Report(ex, new Dictionary<string, string>
-                    {
-                        { "Issue", "Unable to update project in project.xml document" }
-                    });
+                // TODO: log this with App Center
+                //Insights.Report(ex, new Dictionary<string, string>
+                    //{
+                    //    { "Issue", "Unable to update project in project.xml document" }
+                    //});
                 return false;
             }
 
@@ -223,10 +224,11 @@ namespace WebServiceDashboard.Shared.Data
             }
             catch(Exception ex)
             {
-                Insights.Report(ex, new Dictionary<string, string>
-                    {
-                        { "Issue", "Unable to remove project from project.xml document" }
-                    });
+                // TODO: log this with App Center
+                //Insights.Report(ex, new Dictionary<string, string>
+                    //{
+                    //    { "Issue", "Unable to remove project from project.xml document" }
+                    //});
                 return false;
             }
 
@@ -249,10 +251,11 @@ namespace WebServiceDashboard.Shared.Data
             }
             catch(Exception ex)
             {
-                Insights.Report(ex, new Dictionary<string, string>
-                    {
-                        { "Issue", "Unable to update project status in project.xml document" }
-                    });
+                // TODO: log this with App Center
+                //Insights.Report(ex, new Dictionary<string, string>
+                    //{
+                    //    { "Issue", "Unable to update project status in project.xml document" }
+                    //});
                 return false;
             }
 
@@ -290,10 +293,11 @@ namespace WebServiceDashboard.Shared.Data
             }
             catch(Exception ex)
             {
-                Insights.Report(ex, new Dictionary<string, string>
-                    {
-                        { "Issue", "Unable to add endpoint to project.xml document" }
-                    });
+                // TODO: log this with App Center
+                //Insights.Report(ex, new Dictionary<string, string>
+                    //{
+                    //    { "Issue", "Unable to add endpoint to project.xml document" }
+                    //});
                 return false;
             }
 
@@ -325,10 +329,11 @@ namespace WebServiceDashboard.Shared.Data
             }
             catch(Exception ex)
             {
-                Insights.Report(ex, new Dictionary<string, string>
-                    {
-                        { "Issue", "Unable to update endpoint in project.xml document" }
-                    });
+                // TODO: log this with App Center
+                //Insights.Report(ex, new Dictionary<string, string>
+                    //{
+                    //    { "Issue", "Unable to update endpoint in project.xml document" }
+                    //});
                 return false;
             }
 
@@ -347,10 +352,11 @@ namespace WebServiceDashboard.Shared.Data
             }
             catch(Exception ex)
             {
-                Insights.Report(ex, new Dictionary<string, string>
-                    {
-                        { "Issue", "Unable to remove endpoint from project.xml document" }
-                    });
+                // TODO: log this with App Center
+                //Insights.Report(ex, new Dictionary<string, string>
+                    //{
+                    //    { "Issue", "Unable to remove endpoint from project.xml document" }
+                    //});
                 return false;
             }
 
@@ -399,10 +405,11 @@ namespace WebServiceDashboard.Shared.Data
             }
             catch(Exception ex)
             {
-                Insights.Report(ex, new Dictionary<string, string>
-                    {
-                        { "Issue", "Unable to add result and update endpoint in project.xml document" }
-                    });
+                // TODO: log this with App Center
+                //Insights.Report(ex, new Dictionary<string, string>
+                    //{
+                    //    { "Issue", "Unable to add result and update endpoint in project.xml document" }
+                    //});
                 return false;
             }
 
@@ -435,10 +442,11 @@ namespace WebServiceDashboard.Shared.Data
             }
             catch(Exception ex)
             {
-                Insights.Report(ex, new Dictionary<string, string>
-                    {
-                        { "Issue", "Unable to remove results from XML document" }
-                    });
+                // TODO: log this with App Center
+                //Insights.Report(ex, new Dictionary<string, string>
+                    //{
+                    //    { "Issue", "Unable to remove results from XML document" }
+                    //});
                 return false;
             }
 
@@ -459,10 +467,11 @@ namespace WebServiceDashboard.Shared.Data
             }
             catch(Exception ex)
             {
-                Insights.Report(ex, new Dictionary<string, string>
-                    {
-                        { "Issue", $"Unable to export project (ID: {projectID}) from project.xml document" }
-                    });
+                // TODO: log this with App Center
+                //Insights.Report(ex, new Dictionary<string, string>
+                    //{
+                    //    { "Issue", $"Unable to export project (ID: {projectID}) from project.xml document" }
+                    //});
                 return null;
             }
         }
@@ -488,10 +497,11 @@ namespace WebServiceDashboard.Shared.Data
             }
             catch(Exception ex)
             {
-                Insights.Report(ex, new Dictionary<string, string>
-                    {
-                        { "Issue", $"Unable to change IDs in exported project node. Project ID: {oldProjectID}" }
-                    });
+                // TODO: log this with App Center
+                //Insights.Report(ex, new Dictionary<string, string>
+                    //{
+                    //    { "Issue", $"Unable to change IDs in exported project node. Project ID: {oldProjectID}" }
+                    //});
                 return false;
             }
         }

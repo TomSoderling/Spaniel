@@ -349,11 +349,11 @@ namespace WebServiceDashboard.ViewModels
                     Icons.SetProjectIcon(SelectedProject);
 
 
-                    // Track if users are using this feature
-                    Insights.Track("RemoveAllResults", new Dictionary<string, string>
-                        {
-                            { "ProjectName", SelectedProject.Name },
-                        });
+                    // TODO: log this with App Center
+                    // Track if users use this feature very often                     //Insights.Track("RemoveAllResults", new Dictionary<string, string>
+                        //{
+                        //    { "ProjectName", SelectedProject.Name },
+                        //});
 
                     break;
 
@@ -477,12 +477,13 @@ namespace WebServiceDashboard.ViewModels
                     UpdateProjectTestStatus();
 
 
+                    // TODO: log this with App Center
                     // Track this action
-                    Insights.Track("RunSingleEndPoint", new Dictionary<string, string>
-                        {
-                            { "ProjectName", SelectedProject.Name },
-                            { "EndPointName", SelectedEndPoint.Name }
-                        });
+                    //Insights.Track("RunSingleEndPoint", new Dictionary<string, string>
+                        //{
+                        //    { "ProjectName", SelectedProject.Name },
+                        //    { "EndPointName", SelectedEndPoint.Name }
+                        //});
 
 
                     // TODO: try reloading the Project list so the most recently tested project appears on top (sorting is being done somewhere...)
@@ -503,9 +504,10 @@ namespace WebServiceDashboard.ViewModels
             }
             else
             {
+                // TODO: log this with App Center
                 // Track the time it takes to run all EndPoints
-                var trackHandle = Insights.TrackTime("TimeToRunAllEndPoints");
-                trackHandle.Start();
+                //var trackHandle = Insights.TrackTime("TimeToRunAllEndPoints");
+                //trackHandle.Start();
 
                 var client = new HttpClient(new NativeMessageHandler());
                 client.BaseAddress = new Uri(SelectedProject.BaseURL);
@@ -544,16 +546,18 @@ namespace WebServiceDashboard.ViewModels
                     }
                 }
 
-                trackHandle.Stop();
+                // TODO: log this with App Center
+                //trackHandle.Stop();
 
                 UpdateProjectTestStatus();
 
+                // TODO: log this with App Center
                 // Track this action
-                Insights.Track("RunAllEndPoints", new Dictionary<string, string>
-                    {
-                        { "ProjectName", SelectedProject.Name },
-                        { "NumberOfEndPoints", SelectedProject.EndPoints.Count.ToString() }
-                    });
+                //Insights.Track("RunAllEndPoints", new Dictionary<string, string>
+                    //{
+                    //    { "ProjectName", SelectedProject.Name },
+                    //    { "NumberOfEndPoints", SelectedProject.EndPoints.Count.ToString() }
+                    //});
 
 
                 // Hide progress bar
@@ -597,8 +601,9 @@ namespace WebServiceDashboard.ViewModels
             RaisePropertyChanged("FilteredEndPoints"); // let UI know to update list
 
 
+            // TODO: log this with App Center
             // Track if users are using this feature
-            Insights.Track("DuplicateEndPoint");
+            //Insights.Track("DuplicateEndPoint");
         }
 
 

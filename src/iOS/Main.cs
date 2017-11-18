@@ -12,12 +12,12 @@ namespace WebServiceDashboard.iOS
         {
             try
             {
-                #if DEBUG
-                    // Use Insights debug mode.  Any unhandled crash reports, native crash reports, and any Insights.Track() or Insights.Identify() calls will be ignored.
-                    Insights.Initialize(Insights.DebugModeKey);
-                #else
-                    Insights.Initialize(Constants.InsightsApiKey);
-                #endif
+                //#if DEBUG
+                //    // Use Insights debug mode.  Any unhandled crash reports, native crash reports, and any Insights.Track() or Insights.Identify() calls will be ignored.
+                //    Insights.Initialize(Insights.DebugModeKey);
+                //#else
+                //    Insights.Initialize(Constants.InsightsApiKey);
+                //#endif
             }
             catch(Exception ex)
             {

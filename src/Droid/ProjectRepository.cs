@@ -55,14 +55,15 @@ namespace WebServiceDashboard.Droid
                     }
                     else
                     {
+                        // TODO: log this with App Center
                         // Report to Xamarin Insights
                         // doc was loaded, but root is null
-                        Insights.Report(null, new Dictionary<string, string>
-                            {
-                                { "Issue", "projects.xml file was loaded as an XDocument, but the document.Root was null" },
-                                { "Where", "Android Project, ProjectRepository.cs, LoadProjectFileFromDevice() method" },
-                                { "Filename", filename }
-                            });
+                        //Insights.Report(null, new Dictionary<string, string>
+                            //{
+                            //    { "Issue", "projects.xml file was loaded as an XDocument, but the document.Root was null" },
+                            //    { "Where", "Android Project, ProjectRepository.cs, LoadProjectFileFromDevice() method" },
+                            //    { "Filename", filename }
+                            //});
                     }
                 }
                 catch (Exception ex)
@@ -71,25 +72,28 @@ namespace WebServiceDashboard.Droid
                     // seems like it happens this first time the app is run. Didn't save any project results
 
 
+                    // TODO: log this with App Center
                     // file exists, but can't load it
-                    Insights.Report(ex, new Dictionary<string, string>
-                        {
-                            { "Issue", "projects.xml file exists on device, but unable to load as an XDocument" },
-                            { "Filename", filename }
-                        });
+                    //Insights.Report(ex, new Dictionary<string, string>
+                        //{
+                        //    { "Issue", "projects.xml file exists on device, but unable to load as an XDocument" },
+                        //    { "Filename", filename }
+                        //});
                 }
             }
             else
             {
                 // TODO: this file won't exist the first time. Don't want to report this on the first failure.
 
+
+                // TODO: log this with App Center
                 // expected file not on device
-                Insights.Report(null, new Dictionary<string, string>
-                    {
-                        { "Issue", "Expected projects.xml file does not exist on device" },
-                        { "Where", "Android Project, ProjectRepository.cs, LoadProjectFileFromDevice() method" },
-                        { "Filename", filename }
-                    });
+                //Insights.Report(null, new Dictionary<string, string>
+                    //{
+                    //    { "Issue", "Expected projects.xml file does not exist on device" },
+                    //    { "Where", "Android Project, ProjectRepository.cs, LoadProjectFileFromDevice() method" },
+                    //    { "Filename", filename }
+                    //});
             }
 
             return null;
@@ -106,10 +110,11 @@ namespace WebServiceDashboard.Droid
             }
             catch(Exception ex)
             {
-                Insights.Report(ex, new Dictionary<string, string>
-                    {
-                        { "Issue", "Unable to save projects.xml document to device" }
-                    });
+                // TODO: log this with App Center
+                //Insights.Report(ex, new Dictionary<string, string>
+                    //{
+                    //    { "Issue", "Unable to save projects.xml document to device" }
+                    //});
                 return false;
             }
 
@@ -134,11 +139,12 @@ namespace WebServiceDashboard.Droid
             }
             catch (Exception ex)
             {
-                Insights.Report(ex, new Dictionary<string, string>
-                    {
-                        { "Issue", "Unable to save projects.xml file to device" },
-                        { "Filename", filename }
-                    });
+                // TODO: log this with App Center
+                //Insights.Report(ex, new Dictionary<string, string>
+                    //{
+                    //    { "Issue", "Unable to save projects.xml file to device" },
+                    //    { "Filename", filename }
+                    //});
                 return false;
             }
 

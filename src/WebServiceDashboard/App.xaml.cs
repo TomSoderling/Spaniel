@@ -102,7 +102,7 @@ namespace WebServiceDashboard
             base.OnResume();
 
             // Keep track of when the user opens the app
-            Insights.Track("AppOpened");
+            // TODO: log this with App Center             //Insights.Track("AppOpened");
 
 
             // is there a way to Track how many Projects and EndPoints here?
