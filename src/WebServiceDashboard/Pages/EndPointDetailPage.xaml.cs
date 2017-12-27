@@ -1,9 +1,8 @@
-﻿using Xamarin.Forms;
-using WebServiceDashboard.ViewModels;
-using System;
-using Xamarin.Forms.Xaml;
+﻿using System;
+using Spaniel.ViewModels;
+using Xamarin.Forms;
 
-namespace WebServiceDashboard.Pages
+namespace Spaniel.Pages
 {
     public partial class EndPointDetailPage : ContentPage
     {

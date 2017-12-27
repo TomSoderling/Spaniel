@@ -1,6 +1,6 @@
 ﻿using Xamarin.Forms;
 
-namespace WebServiceDashboard.Controls
+namespace Spaniel.Controls
 {
     public class ColoredProgressBar : ProgressBar
     {

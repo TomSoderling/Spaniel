@@ -1,9 +1,9 @@
 ﻿using UIKit;
 using System;
 using Xamarin;
-using WebServiceDashboard.Shared;
+using Spaniel.Shared;
 
-namespace WebServiceDashboard.iOS
+namespace Spaniel.iOS
 {
     public class Application
     {

@@ -3,9 +3,9 @@ using Android.Content.PM;
 using Android.OS;
 using System;
 using Xamarin;
-using WebServiceDashboard.Shared;
+using Spaniel.Shared;
 
-namespace WebServiceDashboard.Droid
+namespace Spaniel.Droid
 {
     [Activity(Label = "Spaniel", Icon = "@drawable/icn_launcher", MainLauncher = true, ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation)]
     public class MainActivity : global::Xamarin.Forms.Platform.Android.FormsApplicationActivity

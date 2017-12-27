@@ -1,11 +1,11 @@
-﻿using WebServiceDashboard.Controls;
+﻿using Spaniel.Controls;
 using Xamarin.Forms.Platform.iOS;
 using Xamarin.Forms;
-using WebServiceDashboard.iOS.Renderers;
+using Spaniel.iOS.Renderers;
 
 [assembly: ExportRenderer(typeof(ColoredProgressBar), typeof(ColoredProgressBarRenderer))]
 
-namespace WebServiceDashboard.iOS.Renderers
+namespace Spaniel.iOS.Renderers
 {
     public class ColoredProgressBarRenderer : ProgressBarRenderer
     {

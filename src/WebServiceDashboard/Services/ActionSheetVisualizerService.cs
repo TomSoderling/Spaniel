@@ -1,8 +1,8 @@
-﻿using WebServiceDashboard.Shared.Services;
-using System.Threading.Tasks;
+﻿using System.Threading.Tasks;
+using Spaniel.Shared.Services;
 using Xamarin.Forms;
 
-namespace WebServiceDashboard.Services
+namespace Spaniel.Services
 {
     public class ActionSheetVisualizerService : IActionSheetVisualizerService
     {

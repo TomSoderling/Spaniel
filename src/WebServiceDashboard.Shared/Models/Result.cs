@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Net;
 
-namespace WebServiceDashboard.Shared.Models
+namespace Spaniel.Shared.Models
 {
     /// <summary>
     /// Represents a Result entity

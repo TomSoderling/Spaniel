@@ -1,6 +1,6 @@
 ﻿using Xamarin.Forms;
 
-namespace WebServiceDashboard.Pages
+namespace Spaniel.Pages
 {
     public partial class ResultDetailPage : ContentPage
     {

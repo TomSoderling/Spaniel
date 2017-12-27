@@ -1,7 +1,7 @@
 ﻿using System;
 using Xamarin.Forms;
 
-namespace WebServiceDashboard.Pages
+namespace Spaniel.Pages
 {
     public partial class ProjectListPage : ContentPage
     {

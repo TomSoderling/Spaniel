@@ -1,13 +1,13 @@
 ﻿using System;
-using WebServiceDashboard.Shared.Services;
+using Spaniel.Shared.Services;
 using Xamarin.Forms;
-using WebServiceDashboard.Droid.Services;
+using Spaniel.Droid.Services;
 using Android.Content;
 using System.IO;
 
 [assembly: Dependency(typeof(ShareServiceDroid))]
 
-namespace WebServiceDashboard.Droid.Services
+namespace Spaniel.Droid.Services
 {
     public class ShareServiceDroid : IShareService
     {

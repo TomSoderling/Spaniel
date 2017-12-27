@@ -4,7 +4,7 @@ using System.Linq.Expressions;
 using System.Reflection;
 using System.Runtime.CompilerServices;
 
-namespace WebServiceDashboard.Shared.ViewModels
+namespace Spaniel.Shared.ViewModels
 {
     public class BaseViewModel : INotifyPropertyChanged
     {

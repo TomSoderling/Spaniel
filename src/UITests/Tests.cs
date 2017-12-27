@@ -3,14 +3,14 @@ using System.Linq;
 using NUnit.Framework; // as of 11/9/2015 - NUnit version >= 3 is not supported by Xamarin.UITest
 using Xamarin.UITest;
 using Xamarin.UITest.Queries;
-using WebServiceDashboard.Shared;
+using Spaniel.Shared;
 using System.Threading;
-using WebServiceDashboard.Shared.Data;
-using WebServiceDashboard.Shared.Services;
-using WebServiceDashboard.Services;
-using WebServiceDashboard.ViewModels;
+using Spaniel.Shared.Data;
+using Spaniel.Shared.Services;
+using Spaniel.Services;
+using Spaniel.ViewModels;
 
-namespace WebServiceDashboard.UITests
+namespace Spaniel.UITests
 {
     // Analysis disable InconsistentNaming
 

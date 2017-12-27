@@ -1,23 +1,21 @@
 ﻿using System;
-using WebServiceDashboard.Shared.Services;
-using WebServiceDashboard.Shared.Models;
-using WebServiceDashboard.Shared.Infrastructure;
-using WebServiceDashboard.Shared.ViewModels;
-using System.Windows.Input;
-using Xamarin.Forms;
-using System.Threading.Tasks;
 using System.Collections.ObjectModel;
-using System.Net.Http;
-using WebServiceDashboard.Shared;
 using System.Diagnostics;
 using System.Linq;
-using WebServiceDashboard.Shared.Data;
+using System.Net.Http;
+using System.Threading.Tasks;
+using System.Windows.Input;
 using ModernHttpClient;
-using Xamarin;
-using System.Collections.Generic;
 using Plugin.Connectivity;
+using Spaniel.Shared;
+using Spaniel.Shared.Data;
+using Spaniel.Shared.Infrastructure;
+using Spaniel.Shared.Models;
+using Spaniel.Shared.Services;
+using Spaniel.Shared.ViewModels;
+using Xamarin.Forms;
 
-namespace WebServiceDashboard.ViewModels
+namespace Spaniel.ViewModels
 {
     public class EndPointViewModel : BaseViewModel
     {

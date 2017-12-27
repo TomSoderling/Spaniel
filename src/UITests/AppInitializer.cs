@@ -1,7 +1,7 @@
 ﻿using Xamarin.UITest;
-using WebServiceDashboard.Shared;
+using Spaniel.Shared;
 
-namespace WebServiceDashboard.UITests
+namespace Spaniel.UITests
 {
     public class AppInitializer
     {

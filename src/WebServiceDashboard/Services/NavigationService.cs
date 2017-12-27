@@ -1,12 +1,12 @@
 ﻿using System;
-using WebServiceDashboard.Shared.Services;
 using System.Threading.Tasks;
+using Spaniel.Pages;
+using Spaniel.Shared.Models;
+using Spaniel.Shared.Services;
+using Spaniel.ViewModels;
 using Xamarin.Forms;
-using WebServiceDashboard.Pages;
-using WebServiceDashboard.Shared.Models;
-using WebServiceDashboard.ViewModels;
 
-namespace WebServiceDashboard.Services
+namespace Spaniel.Services
 {
     /// <summary>
     /// Implementation of a lightweight NavigationService for Xamarin.Forms project

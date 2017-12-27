@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using WebServiceDashboard.Shared.Services;
+using Spaniel.Shared.Services;
 
 namespace UnitTests
 {

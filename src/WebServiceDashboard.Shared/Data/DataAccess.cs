@@ -1,11 +1,10 @@
 ﻿using System;
-using WebServiceDashboard.Shared.Services;
-using WebServiceDashboard.Shared.Models;
-using System.Collections.ObjectModel;
 using System.Collections.Generic;
-using System.Xml.Linq;
+using System.Collections.ObjectModel;
+using Spaniel.Shared.Models;
+using Spaniel.Shared.Services;
 
-namespace WebServiceDashboard.Shared.Data
+namespace Spaniel.Shared.Data
 {
     public static class DataAccess
     {

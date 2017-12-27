@@ -1,8 +1,8 @@
-﻿using Xamarin.Forms;
-using System;
+﻿using System;
+using Xamarin.Forms;
 using Xamarin.Forms.PlatformConfiguration.iOSSpecific;
 
-namespace WebServiceDashboard.Pages
+namespace Spaniel.Pages
 {
     public partial class EndPointListPage : ContentPage
     {

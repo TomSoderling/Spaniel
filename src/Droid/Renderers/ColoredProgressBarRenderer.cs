@@ -1,12 +1,12 @@
 ﻿using Xamarin.Forms.Platform.Android;
-using WebServiceDashboard.Controls;
+using Spaniel.Controls;
 using Android.Graphics;
 using Xamarin.Forms;
-using WebServiceDashboard.Droid.Renderers;
+using Spaniel.Droid.Renderers;
 
 [assembly: ExportRenderer(typeof(ColoredProgressBar), typeof(ColoredProgressBarRenderer))]
 
-namespace WebServiceDashboard.Droid.Renderers
+namespace Spaniel.Droid.Renderers
 {
     public class ColoredProgressBarRenderer : ProgressBarRenderer
     {

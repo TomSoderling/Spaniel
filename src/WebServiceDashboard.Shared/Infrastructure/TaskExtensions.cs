@@ -1,6 +1,6 @@
 ﻿using System.Threading.Tasks;
 
-namespace WebServiceDashboard.Shared.Infrastructure
+namespace Spaniel.Shared.Infrastructure
 {
     public static class TaskExtensions
     {

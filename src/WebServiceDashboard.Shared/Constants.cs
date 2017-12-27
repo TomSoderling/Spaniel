@@ -1,5 +1,5 @@
 ﻿
-namespace WebServiceDashboard.Shared
+namespace Spaniel.Shared
 {
     public static class Constants
     {

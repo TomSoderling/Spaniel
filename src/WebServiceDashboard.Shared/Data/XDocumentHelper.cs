@@ -1,12 +1,11 @@
 ﻿using System;
-using System.Collections.ObjectModel;
-using System.Xml.Linq;
-using WebServiceDashboard.Shared.Models;
-using WebServiceDashboard.Shared.Data;
-using System.Linq;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
+using System.Linq;
+using System.Xml.Linq;
+using Spaniel.Shared.Models;
 
-namespace WebServiceDashboard.Shared.Data
+namespace Spaniel.Shared.Data
 {
     public static class XDocumentHelper 
     {

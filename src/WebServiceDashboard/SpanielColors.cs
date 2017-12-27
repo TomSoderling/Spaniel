@@ -1,7 +1,7 @@
-﻿using Xamarin.Forms;
-using WebServiceDashboard.Shared;
+﻿using Spaniel.Shared;
+using Xamarin.Forms;
 
-namespace WebServiceDashboard
+namespace Spaniel
 {
     public static class SpanielColors
     {

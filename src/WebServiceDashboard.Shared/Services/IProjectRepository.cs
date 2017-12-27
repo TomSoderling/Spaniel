@@ -1,8 +1,8 @@
 ﻿using System.Collections.Generic;
-using WebServiceDashboard.Shared.Models;
 using System.Xml.Linq;
+using Spaniel.Shared.Models;
 
-namespace WebServiceDashboard.Shared.Services
+namespace Spaniel.Shared.Services
 {
     public interface IProjectRepository
     {

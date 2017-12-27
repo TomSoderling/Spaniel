@@ -1,6 +1,6 @@
-﻿using WebServiceDashboard.Shared.Services;
+﻿using Spaniel.Shared.Services;
 using Xamarin.Forms;
-using WebServiceDashboard.iOS.Services;
+using Spaniel.iOS.Services;
 using UIKit;
 using Foundation;
 using System;
@@ -9,7 +9,7 @@ using CoreGraphics;
 
 [assembly: Dependency(typeof(ShareServiceiOS))]
 
-namespace WebServiceDashboard.iOS.Services
+namespace Spaniel.iOS.Services
 {
     public class ShareServiceiOS : IShareService
     {

@@ -1,8 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Collections.ObjectModel;
 
-namespace WebServiceDashboard.Shared.Models
+namespace Spaniel.Shared.Models
 {
     /// <summary>
     /// Represents a EndPoint entity

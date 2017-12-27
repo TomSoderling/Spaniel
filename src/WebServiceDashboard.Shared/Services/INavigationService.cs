@@ -1,7 +1,7 @@
 ﻿using System.Threading.Tasks;
-using WebServiceDashboard.Shared.Models;
+using Spaniel.Shared.Models;
 
-namespace WebServiceDashboard.Shared.Services
+namespace Spaniel.Shared.Services
 {
     /// <summary>
     /// Defines a lightweight Navigation Service interface to loosely couple the Xamarin.Forms implementation

@@ -5,13 +5,13 @@ using System.Threading.Tasks;
 using System.Xml.Linq;
 using Foundation;
 using UIKit;
-using WebServiceDashboard.Pages;
-using WebServiceDashboard.Shared.Data;
-using WebServiceDashboard.Shared.Services;
-using WebServiceDashboard.ViewModels;
+using Spaniel.Pages;
+using Spaniel.Shared.Data;
+using Spaniel.Shared.Services;
+using Spaniel.ViewModels;
 using Xamarin.Forms;
 
-namespace WebServiceDashboard.iOS
+namespace Spaniel.iOS
 {
     [Register("AppDelegate")]
     public partial class AppDelegate : global::Xamarin.Forms.Platform.iOS.FormsApplicationDelegate

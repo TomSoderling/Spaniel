@@ -1,7 +1,7 @@
 ﻿using NUnit.Framework;
-using WebServiceDashboard.Services;
-using WebServiceDashboard.Shared.Services;
-using WebServiceDashboard.ViewModels;
+using Spaniel.Services;
+using Spaniel.Shared.Services;
+using Spaniel.ViewModels;
 
 namespace UnitTests
 {

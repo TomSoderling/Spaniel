@@ -1,21 +1,21 @@
 ﻿using System;
 using System.Collections.Generic;
-using WebServiceDashboard.Shared.Models;
-using WebServiceDashboard.Shared.Data;
+using Spaniel.Shared.Models;
+using Spaniel.Shared.Data;
 using Foundation;
 using System.Linq;
 using System.Xml.Linq;
 using System.IO;
 using Xamarin.Forms;
-using WebServiceDashboard.iOS;
+using Spaniel.iOS;
 using Xamarin;
 using System.Diagnostics;
-using WebServiceDashboard.Shared;
-using WebServiceDashboard.Shared.Services;
+using Spaniel.Shared;
+using Spaniel.Shared.Services;
 
 [assembly: Dependency(typeof(ProjectRepository))]
 
-namespace WebServiceDashboard.iOS
+namespace Spaniel.iOS
 {
     /// <summary>
     /// Class to handle file access for each platform

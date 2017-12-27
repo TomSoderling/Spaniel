@@ -1,19 +1,13 @@
-﻿using System.Linq;
-using Microsoft.AppCenter;
-using Microsoft.AppCenter.Analytics;
-using Microsoft.AppCenter.Crashes;
-using WebServiceDashboard.Pages;
-using WebServiceDashboard.Services;
-using WebServiceDashboard.Shared.ViewModels;
-using WebServiceDashboard.ViewModels;
-using Xamarin;
+﻿using Spaniel.Pages;
+using Spaniel.Services;
+using Spaniel.ViewModels;
 using Xamarin.Forms;
 using Xamarin.Forms.PlatformConfiguration.iOSSpecific;
 using Xamarin.Forms.Xaml;
 
 
 [assembly: XamlCompilation(XamlCompilationOptions.Compile)] // use compiled XAML for the entire app
-namespace WebServiceDashboard
+namespace Spaniel
 {
     public partial class App : Application
     {

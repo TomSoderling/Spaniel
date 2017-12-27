@@ -1,6 +1,6 @@
 ﻿using System.Threading.Tasks;
 
-namespace WebServiceDashboard.Shared.Services
+namespace Spaniel.Shared.Services
 {
     public interface IActionSheetVisualizerService
     {

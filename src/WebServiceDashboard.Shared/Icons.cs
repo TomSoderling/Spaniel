@@ -1,8 +1,8 @@
-﻿using WebServiceDashboard.Shared.Models;
+﻿using Spaniel.Shared.Models;
 using System.Collections.ObjectModel;
 using System.Net;
 
-namespace WebServiceDashboard.Shared
+namespace Spaniel.Shared
 {
     public static class Icons
     {

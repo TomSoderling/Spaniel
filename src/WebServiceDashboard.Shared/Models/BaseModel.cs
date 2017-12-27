@@ -1,8 +1,7 @@
-﻿using System;
-using System.ComponentModel;
+﻿using System.ComponentModel;
 using System.Runtime.CompilerServices;
 
-namespace WebServiceDashboard.Shared.Models
+namespace Spaniel.Shared.Models
 {
     /// <summary>
     /// The Base Model simply implements INotifyPropertyChanged.

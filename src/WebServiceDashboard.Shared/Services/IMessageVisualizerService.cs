@@ -1,6 +1,6 @@
 ﻿using System.Threading.Tasks;
 
-namespace WebServiceDashboard.Shared.Services
+namespace Spaniel.Shared.Services
 {
     /// <summary>
     /// Interface to display an alert to the user and to loosely couple the Xamarin.Forms implementation

@@ -1,7 +1,7 @@
 ﻿using System;
 
 
-namespace WebServiceDashboard.Shared
+namespace Spaniel.Shared
 {
     public enum TestStatus
     {

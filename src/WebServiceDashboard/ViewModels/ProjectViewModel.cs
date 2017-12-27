@@ -1,21 +1,19 @@
 ﻿using System;
-using WebServiceDashboard.Shared.Models;
-using System.Linq;
-using System.Windows.Input;
-using WebServiceDashboard.Shared.Services;
-using WebServiceDashboard.Shared.Infrastructure;
-using System.Threading.Tasks;
-using Xamarin.Forms;
 using System.Collections.ObjectModel;
-using WebServiceDashboard.Shared.ViewModels;
-using WebServiceDashboard.Shared;
-using WebServiceDashboard.Shared.Data;
 using System.Diagnostics;
-using System.Collections.Generic;
-using Xamarin;
+using System.Linq;
+using System.Threading.Tasks;
+using System.Windows.Input;
 using Plugin.Connectivity;
+using Spaniel.Shared;
+using Spaniel.Shared.Data;
+using Spaniel.Shared.Infrastructure;
+using Spaniel.Shared.Models;
+using Spaniel.Shared.Services;
+using Spaniel.Shared.ViewModels;
+using Xamarin.Forms;
 
-namespace WebServiceDashboard.ViewModels
+namespace Spaniel.ViewModels
 {
     public class ProjectViewModel : BaseViewModel
     {

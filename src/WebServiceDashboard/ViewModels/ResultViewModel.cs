@@ -1,8 +1,8 @@
-﻿using WebServiceDashboard.Shared.ViewModels;
-using WebServiceDashboard.Shared.Models;
-using WebServiceDashboard.Shared;
+﻿using Spaniel.Shared;
+using Spaniel.Shared.Models;
+using Spaniel.Shared.ViewModels;
 
-namespace WebServiceDashboard.ViewModels
+namespace Spaniel.ViewModels
 {
     public class ResultViewModel : BaseViewModel
     {

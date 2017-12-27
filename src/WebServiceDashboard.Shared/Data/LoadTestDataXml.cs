@@ -1,8 +1,8 @@
-﻿using System.Reflection;
+﻿using System;
 using System.IO;
-using System;
+using System.Reflection;
 
-namespace WebServiceDashboard.Shared.Data
+namespace Spaniel.Shared.Data
 {
     /// <summary>
     /// Static class to load in the embedded xml resource file (TestData.xml)

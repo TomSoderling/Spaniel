@@ -1,7 +1,7 @@
-﻿using WebServiceDashboard.Shared.Services;
+﻿using Spaniel.Shared.Services;
 using Xamarin.Forms;
 
-namespace WebServiceDashboard.Services
+namespace Spaniel.Services
 {
     /// <summary>
     /// Performs the role of a lightweight Dependency Injection container

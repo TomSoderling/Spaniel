@@ -1,7 +1,7 @@
-﻿using Xamarin.Forms;
-using WebServiceDashboard.Shared;
+﻿using Spaniel.Shared;
+using Xamarin.Forms;
 
-namespace WebServiceDashboard.ViewModels
+namespace Spaniel.ViewModels
 {
     public class PlaceHolderPageViewModel
     {

@@ -1,10 +1,9 @@
-﻿using WebServiceDashboard.Pages;
-using WebServiceDashboard.Shared.Services;
-using WebServiceDashboard.ViewModels;
+﻿using Spaniel.Shared.Services;
+using Spaniel.ViewModels;
 using Xamarin.Forms;
 using Xamarin.Forms.PlatformConfiguration.iOSSpecific;
 
-namespace WebServiceDashboard.Pages
+namespace Spaniel.Pages
 {
     public class MainPage : MasterDetailPage
     {

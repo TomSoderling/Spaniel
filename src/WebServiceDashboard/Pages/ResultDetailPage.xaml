@@ -4,7 +4,7 @@
     xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core" 
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     ios:Page.UseSafeArea="true"
-    x:Class="WebServiceDashboard.Pages.ResultDetailPage"
+    x:Class="Spaniel.Pages.ResultDetailPage"
 	Title="Result Details">
 
 	<ScrollView x:Name="scrollView" Orientation="Vertical" BindingContext="{Binding .}" BackgroundColor="{StaticResource SpanielLightestGrey}">

@@ -1,5 +1,5 @@
 ﻿
-namespace WebServiceDashboard.Shared.Services
+namespace Spaniel.Shared.Services
 {
     /// <summary>
     /// Defines a lightweight Dependency Service interface to loosely couple the Xamarin.Forms implementation

@@ -1,8 +1,8 @@
-﻿using WebServiceDashboard.ViewModels;
+﻿using Spaniel.ViewModels;
 using Xamarin.Forms;
 using Xamarin.Forms.PlatformConfiguration.iOSSpecific;
 
-namespace WebServiceDashboard.Pages
+namespace Spaniel.Pages
 {
     public partial class ProjectDetailPage : ContentPage
     {
