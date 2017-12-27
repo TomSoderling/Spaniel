@@ -35,9 +35,20 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Test.cs" />
+    <Compile Include="DependencyServiceStub.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\WebServiceDashboard\WebServiceDashboard.csproj">
+      <Project>{C5D83B8A-EC64-4C31-BE2A-A17991C98090}</Project>
+      <Name>WebServiceDashboard</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\WebServiceDashboard.Shared\WebServiceDashboard.Shared.csproj">
+      <Project>{36DA9EAC-82A8-433B-9227-49D1ADC3D71E}</Project>
+      <Name>WebServiceDashboard.Shared</Name>
+    </ProjectReference>
   </ItemGroup>
 </Project>

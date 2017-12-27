@@ -6,7 +6,7 @@ namespace WebServiceDashboard.Shared.Services
     /// </summary>
     public interface IDependencyService
     {
-        T Get<T>() where T:class;
+        T Get<T>() where T : class;
     }
 }
 
