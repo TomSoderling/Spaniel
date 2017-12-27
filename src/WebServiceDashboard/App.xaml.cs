@@ -12,7 +12,7 @@ using Xamarin.Forms.PlatformConfiguration.iOSSpecific;
 using Xamarin.Forms.Xaml;
 
 
-[assembly: XamlCompilation (XamlCompilationOptions.Compile)] // use compiled XAML for the entire app
+[assembly: XamlCompilation(XamlCompilationOptions.Compile)] // use compiled XAML for the entire app
 namespace WebServiceDashboard
 {
     public partial class App : Application
@@ -31,11 +31,9 @@ namespace WebServiceDashboard
 
 
             // Start the VS App Center SDK
-            // TODO: Does App Center provide seperate Debug/Release SDK app secrets like Xamarin Insights did?
-            AppCenter.Start("ios=8e88ba66-ca1e-4bfe-a0ed-8cba1480f183;" + 
-                            "android=d3408e78-bd64-4682-b501-da734f01802e;",
-                            typeof(Analytics), typeof(Crashes));
-
+            #if !DEBUG
+                AppCenter.Start("ios=8e88ba66-ca1e-4bfe-a0ed-8cba1480f183;" + "android=d3408e78-bd64-4682-b501-da734f01802e;", typeof(Analytics), typeof(Crashes));
+            #endif
 
 
             // This may not be good practice - it's only here to help me get the iOS 3D touch quick actions to work
