@@ -1,4 +1,7 @@
-﻿using Spaniel.Pages;
+﻿using Microsoft.AppCenter;
+using Microsoft.AppCenter.Analytics;
+using Microsoft.AppCenter.Crashes;
+using Spaniel.Pages;
 using Spaniel.Services;
 using Spaniel.ViewModels;
 using Xamarin.Forms;
@@ -26,7 +29,7 @@ namespace Spaniel
 
             // Start the VS App Center SDK
             #if !DEBUG
-                AppCenter.Start("ios=8e88ba66-ca1e-4bfe-a0ed-8cba1480f183;" + "android=d3408e78-bd64-4682-b501-da734f01802e;", typeof(Analytics), typeof(Crashes));
+                AppCenter.Start(ApiKeys.AppCenterAppSecret_iOS + ApiKeys.AppCenterAppSecret_Android, typeof(Analytics), typeof(Crashes));
             #endif
 
 

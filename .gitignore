@@ -14,3 +14,4 @@ src/Spaniel/obj
 src/Spaniel/bin
 src/Spaniel.Shared/obj
 src/Spaniel.Shared/bin
+ApiKeys.cs
