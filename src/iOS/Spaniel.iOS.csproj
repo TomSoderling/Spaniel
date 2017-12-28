@@ -269,13 +269,13 @@
     <InterfaceDefinition Include="LaunchScreen.storyboard" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\WebServiceDashboard\Spaniel.csproj">
-      <Project>{C5D83B8A-EC64-4C31-BE2A-A17991C98090}</Project>
-      <Name>Spaniel</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\WebServiceDashboard.Shared\Spaniel.Shared.csproj">
+    <ProjectReference Include="..\Spaniel.Shared\Spaniel.Shared.csproj">
       <Project>{36DA9EAC-82A8-433B-9227-49D1ADC3D71E}</Project>
       <Name>Spaniel.Shared</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Spaniel\Spaniel.csproj">
+      <Project>{C5D83B8A-EC64-4C31-BE2A-A17991C98090}</Project>
+      <Name>Spaniel</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="..\packages\Xamarin.Forms.2.5.0.122203\build\netstandard1.0\Xamarin.Forms.targets" Condition="Exists('..\packages\Xamarin.Forms.2.5.0.122203\build\netstandard1.0\Xamarin.Forms.targets')" />

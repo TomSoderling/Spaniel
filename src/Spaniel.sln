@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Spaniel", "WebServiceDashboard\Spaniel.csproj", "{C5D83B8A-EC64-4C31-BE2A-A17991C98090}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Spaniel", "Spaniel\Spaniel.csproj", "{C5D83B8A-EC64-4C31-BE2A-A17991C98090}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Spaniel.iOS", "iOS\Spaniel.iOS.csproj", "{AA09BEA6-B2A7-4C10-A152-02DB52B444BC}"
 EndProject
@@ -11,7 +11,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Spaniel.UITests", "UITests\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTests", "UnitTests\UnitTests.csproj", "{4CFBACFF-9AA2-4CA7-952A-413AC658E140}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Spaniel.Shared", "WebServiceDashboard.Shared\Spaniel.Shared.csproj", "{36DA9EAC-82A8-433B-9227-49D1ADC3D71E}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Spaniel.Shared", "Spaniel.Shared\Spaniel.Shared.csproj", "{36DA9EAC-82A8-433B-9227-49D1ADC3D71E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

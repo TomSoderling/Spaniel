@@ -10,3 +10,7 @@ src/UnitTests/bin
 src/WebServiceDashboard.Shared/obj
 src/UnitTests/obj
 src/WebServiceDashboard.Shared/bin
+src/Spaniel/obj
+src/Spaniel/bin
+src/Spaniel.Shared/obj
+src/Spaniel.Shared/bin

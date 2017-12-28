@@ -3,6 +3,7 @@ using Spaniel.Controls;
 using Android.Graphics;
 using Xamarin.Forms;
 using Spaniel.Droid.Renderers;
+using Android.Content;
 
 [assembly: ExportRenderer(typeof(ColoredProgressBar), typeof(ColoredProgressBarRenderer))]
 
@@ -10,6 +11,10 @@ namespace Spaniel.Droid.Renderers
 {
     public class ColoredProgressBarRenderer : ProgressBarRenderer
     {
+        public ColoredProgressBarRenderer(Context context) : base(context)
+        {
+        }
+
         protected override void OnElementChanged(ElementChangedEventArgs<ProgressBar> e)
         {
             base.OnElementChanged(e);
