@@ -68,8 +68,8 @@ namespace Spaniel.Droid
                 }
                 catch (Exception ex)
                 {
-                    // TODO: Getting a "sharing violation" on Android Sim. Nexus 4 Lollipop
-                    // seems like it happens this first time the app is run. Didn't save any project results
+                    // TODO: Getting a "sharing violation" exception when attempting to load the document the first time.
+                    // Didn't save any project results & can't delete a Project. Galaxy S8
 
 
                     // TODO: log this with App Center
@@ -83,17 +83,7 @@ namespace Spaniel.Droid
             }
             else
             {
-                // TODO: this file won't exist the first time. Don't want to report this on the first failure.
-
-
-                // TODO: log this with App Center
-                // expected file not on device
-                //Insights.Report(null, new Dictionary<string, string>
-                    //{
-                    //    { "Issue", "Expected projects.xml file does not exist on device" },
-                    //    { "Where", "Android Project, ProjectRepository.cs, LoadProjectFileFromDevice() method" },
-                    //    { "Filename", filename }
-                    //});
+                // This file won't exist the first time. Don't want to report this on the first failure.
             }
 
             return null;

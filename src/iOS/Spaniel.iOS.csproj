@@ -124,16 +124,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\WebServiceDashboard\WebServiceDashboard.csproj">
-      <Project>{C5D83B8A-EC64-4C31-BE2A-A17991C98090}</Project>
-      <Name>WebServiceDashboard</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\WebServiceDashboard.Shared\WebServiceDashboard.Shared.csproj">
-      <Project>{36DA9EAC-82A8-433B-9227-49D1ADC3D71E}</Project>
-      <Name>WebServiceDashboard.Shared</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
     <BundleResource Include="Resources\icn_EndpointFailed.png" />
     <BundleResource Include="Resources\icn_EndpointFailed%402x.png" />
     <BundleResource Include="Resources\icn_EndpointFailed%403x.png" />
@@ -277,6 +267,16 @@
   </ItemGroup>
   <ItemGroup>
     <InterfaceDefinition Include="LaunchScreen.storyboard" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\WebServiceDashboard\Spaniel.csproj">
+      <Project>{C5D83B8A-EC64-4C31-BE2A-A17991C98090}</Project>
+      <Name>Spaniel</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\WebServiceDashboard.Shared\Spaniel.Shared.csproj">
+      <Project>{36DA9EAC-82A8-433B-9227-49D1ADC3D71E}</Project>
+      <Name>Spaniel.Shared</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="..\packages\Xamarin.Forms.2.5.0.122203\build\netstandard1.0\Xamarin.Forms.targets" Condition="Exists('..\packages\Xamarin.Forms.2.5.0.122203\build\netstandard1.0\Xamarin.Forms.targets')" />
 </Project>

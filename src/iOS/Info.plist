@@ -78,7 +78,7 @@
 			<string>Spaniel Project Files</string>
 			<key>LSItemContentTypes</key>
 			<array>
-				<string>com.zebra.spaniel</string>
+				<string>com.tomsoderling.spaniel</string>
 			</array>
 			<key>CFBundleTypeIconFiles</key>
 			<array/>
@@ -90,7 +90,7 @@
 			<key>UTTypeDescription</key>
 			<string>Spaniel Project XML Export</string>
 			<key>UTTypeIdentifier</key>
-			<string>com.zebra.spaniel</string>
+			<string>com.tomsoderling.spaniel</string>
 			<key>UTTypeConformsTo</key>
 			<array>
 				<string>public.data</string>

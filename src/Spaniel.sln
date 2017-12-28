@@ -1,17 +1,17 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebServiceDashboard", "WebServiceDashboard\WebServiceDashboard.csproj", "{C5D83B8A-EC64-4C31-BE2A-A17991C98090}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Spaniel", "WebServiceDashboard\Spaniel.csproj", "{C5D83B8A-EC64-4C31-BE2A-A17991C98090}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebServiceDashboard.iOS", "iOS\WebServiceDashboard.iOS.csproj", "{AA09BEA6-B2A7-4C10-A152-02DB52B444BC}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Spaniel.iOS", "iOS\Spaniel.iOS.csproj", "{AA09BEA6-B2A7-4C10-A152-02DB52B444BC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebServiceDashboard.Droid", "Droid\WebServiceDashboard.Droid.csproj", "{9EED5FD9-96BF-47E5-A434-3FD04A7A24D7}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Spaniel.Droid", "Droid\Spaniel.Droid.csproj", "{9EED5FD9-96BF-47E5-A434-3FD04A7A24D7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebServiceDashboard.UITests", "UITests\WebServiceDashboard.UITests.csproj", "{05C12D43-4968-4E0F-A086-46C21E09337B}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Spaniel.UITests", "UITests\Spaniel.UITests.csproj", "{05C12D43-4968-4E0F-A086-46C21E09337B}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTests", "UnitTests\UnitTests.csproj", "{4CFBACFF-9AA2-4CA7-952A-413AC658E140}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebServiceDashboard.Shared", "WebServiceDashboard.Shared\WebServiceDashboard.Shared.csproj", "{36DA9EAC-82A8-433B-9227-49D1ADC3D71E}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Spaniel.Shared", "WebServiceDashboard.Shared\Spaniel.Shared.csproj", "{36DA9EAC-82A8-433B-9227-49D1ADC3D71E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -100,6 +100,5 @@ Global
 		Policies = $0
 		$0.DotNetNamingPolicy = $1
 		$1.DirectoryNamespaceAssociation = PrefixedHierarchical
-		$1.ResourceNamePolicy = FileFormatDefault
 	EndGlobalSection
 EndGlobal
