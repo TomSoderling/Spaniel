@@ -135,7 +135,12 @@ namespace Spaniel.Droid
 
             try
             {
-                doc.Save(new StreamWriter(filename));
+                var sw = new StreamWriter(filename);
+                doc.Save(sw);
+
+                // Need to dispose of this after the file is created. Otherwise we get a "Sharing violation on path /data/user/0/com.TomSoderling.Spaniel/files/projects.xml" 
+                // exception when trying to load the document the first time after it's created.
+                sw.Dispose(); 
             }
             catch (Exception ex)
             {
