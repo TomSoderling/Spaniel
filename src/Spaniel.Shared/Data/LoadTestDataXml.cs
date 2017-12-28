@@ -12,9 +12,9 @@ namespace Spaniel.Shared.Data
         // embedded resource file
 
         #if DEBUG
-            private const string testDataFilename = "WebServiceDashboard.Shared.Data.TestData.xml"; // test data. contains the iFactr and HttpBin projects
+            private const string testDataFilename = "Spaniel.Shared.Data.TestData.xml"; // test data. contains the iFactr and HttpBin projects
         #else
-            private const string testDataFilename = "WebServiceDashboard.Shared.Data.StartingData.xml"; // starting test data for release builds. contains only the HttpBin project
+            private const string testDataFilename = "Spaniel.Shared.Data.StartingData.xml"; // starting test data for release builds. contains only the HttpBin project
         #endif
         
         public static string TestData

@@ -7,7 +7,7 @@
     <ProjectTypeGuids>{FEACFBD2-3405-455C-9665-78FE426C6842};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <ProjectGuid>{AA09BEA6-B2A7-4C10-A152-02DB52B444BC}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>WebServiceDashboard.iOS</RootNamespace>
+    <RootNamespace>Spaniel.iOS</RootNamespace>
     <IPhoneResourcePrefix>Resources</IPhoneResourcePrefix>
     <AssemblyName>WebServiceDashboardiOS</AssemblyName>
   </PropertyGroup>
@@ -37,6 +37,7 @@
     <ConsolePause>false</ConsolePause>
     <CodesignKey>iPhone Developer</CodesignKey>
     <BuildIpa>true</BuildIpa>
+<AssemblyName>SpanieliOS</AssemblyName>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhoneSimulator' ">
     <DebugType>full</DebugType>
@@ -66,6 +67,7 @@
     </IpaPackageName>
     <BuildIpa>true</BuildIpa>
     <CodesignProvision>Wildcard Prov Profile</CodesignProvision>
+<AssemblyName>SpanieliOS</AssemblyName>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />

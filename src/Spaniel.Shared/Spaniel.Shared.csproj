@@ -6,8 +6,8 @@
     <ProjectTypeGuids>{786C830F-07A1-408B-BD7F-6EE04809D6DB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <ProjectGuid>{36DA9EAC-82A8-433B-9227-49D1ADC3D71E}</ProjectGuid>
     <OutputType>Library</OutputType>
-    <RootNamespace>WebServiceDashboard.Shared</RootNamespace>
-    <AssemblyName>WebServiceDashboard.Shared</AssemblyName>
+    <RootNamespace>Spaniel.Shared</RootNamespace>
+    <AssemblyName>Spaniel.Shared</AssemblyName>
     <TargetFrameworkProfile>Profile78</TargetFrameworkProfile>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
   </PropertyGroup>
