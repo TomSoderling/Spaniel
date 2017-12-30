@@ -258,6 +258,7 @@
     <ImageAsset Include="Resources\Images.xcassets\Spaniel_Images.launchimage\Default-Landscape-736h%403x.png" />
     <ImageAsset Include="Resources\Images.xcassets\Spaniel_Images.launchimage\Default%402x.png" />
     <ImageAsset Include="Resources\Images.xcassets\Spaniel_Images.launchimage\Portrait_640x1136.png" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons.appiconset\AppStore 1024x1024.png" />
   </ItemGroup>
   <ItemGroup>
     <ITunesArtwork Include="iTunesArtwork" />
