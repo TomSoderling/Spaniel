@@ -61,12 +61,12 @@
     <MtouchArch>ARMv7, ARM64</MtouchArch>
     <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
     <MtouchProfiling>false</MtouchProfiling>
-    <CodesignKey>iPhone Developer: Tom Soderling (GGX3C3U4HM)</CodesignKey>
+    <CodesignKey>iPhone Developer</CodesignKey>
     <MtouchDebug>true</MtouchDebug>
     <IpaPackageName>
     </IpaPackageName>
     <BuildIpa>true</BuildIpa>
-    <CodesignProvision>Wildcard Prov Profile</CodesignProvision>
+    <CodesignProvision></CodesignProvision>
 <AssemblyName>SpanieliOS</AssemblyName>
   </PropertyGroup>
   <ItemGroup>
