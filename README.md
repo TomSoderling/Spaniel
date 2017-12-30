@@ -1,5 +1,9 @@
 # Spaniel
-Spaniel is a Xamarin.Forms mobile app for iOS and Android designed to allow you to run health checkups on your RESTful web service endpoints
+Spaniel is a Xamarin.Forms app for iOS and Android for running health checkups for your RESTful web service endpoints.  
+
+Features:  
+ - Standard layout for phone and master-detail layout for tablet devices
+ - Quick actions for devices that support 3D Touch
 
 
 ## Known Limitations 
