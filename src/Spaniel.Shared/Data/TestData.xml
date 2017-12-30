@@ -1,68 +1,22 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <projects>
-  <project ID="740001d8-b0bb-4b53-a4db-7748c81532c2" name="iFactr Customers" desc="iFactr customers demo endpoint. See [Base URL]/help for more info" user="" pass="" baseURL="http://ifactrcustomers-dev.azurewebsites.net" status="0" lastDt="">
-   <endpoints>
-      <endpoint ID="8b94cc29-e3a6-488b-a9db-75e1dfcd6993" name="Get Customers - json" status="0" url="/customers.json" verb="GET" pFill="" fltrD="" lastDt="">
-        <results />
-      </endpoint>
-      <endpoint ID="e504d370-bee6-44a0-abc6-78eb5ec6b1cd" name="Get Customers - xml" status="0" url="/customers.xml" verb="GET" pFill="" fltrD="" lastDt="">
-        <results />
-      </endpoint>
-      <endpoint ID="e34ad27b-35c0-4c43-8c13-7db16cc3667d" name="Get Customer #1 - json" status="0" url="/customers/{customer}.json" verb="GET" pFill="1" fltrD="" lastDt="">
-        <results />
-      </endpoint>
-      <endpoint ID="ea9ea5da-ded2-4e9c-a496-af44b14b6015" name="Get Customer #1 - xml" status="0" url="/customers/{customer}.xml" verb="GET" pFill="1" fltrD="" lastDt="">
-        <results />
-      </endpoint>
-      <endpoint ID="8b3c72b4-0bdc-430f-82b4-3d2fba9c90e9" name="Filter Customer by name" status="0" url="/customers.json" verb="GET" pFill="" fltrD="?filter=altera" lastDt="">
-        <results />
-      </endpoint>
-      <endpoint ID="f73ee0e6-adcc-481a-9b3d-f9071af6df39" name="Get Customer #1 Contacts - json" status="0" url="/customers/{customer}/contacts.json" verb="GET" pFill="1" fltrD="" lastDt="">
-        <results />
-      </endpoint>
-      <endpoint ID="00db5741-e99c-406e-b21d-0138f1ad83bf" name="Get Customer #1 Contacts - xml" status="0" url="/customers/{customer}/contacts.xml" verb="GET" pFill="1" fltrD="" lastDt="">
-        <results />
-      </endpoint>
-      <endpoint ID="2633a44d-db47-465a-b33e-384234dc8369" name="Get Customer #1 Contact #1 - json" status="0" url="/customers/{customer}/{contact}.json" verb="GET" pFill="1, 1" fltrD="" lastDt="">
-        <results />
-      </endpoint>
-      <endpoint ID="947fa2c2-bbf0-4375-83c7-ff4669c232a8" name="Get Customer #1 Contact #1 - xml" status="0" url="/customers/{customer}/{contact}.xml" verb="GET" pFill="1, 1" fltrD="" lastDt="">
-        <results />
-      </endpoint>
-      <endpoint ID="76ccfc02-9b69-425c-b36e-9d05de84ab6a" name="Get Orders for Customer #1 - xml" status="0" url="/customers/orders/{customer}.xml" verb="GET" pFill="1" fltrD="" lastDt="">
-        <results />
-      </endpoint>
-      <endpoint ID="fdbcadf8-05e7-4c8e-a0c1-e2d7062a782a" name="Get Orders for Customer #1" status="0" url="/orders/{customer}.json" verb="GET" pFill="1" fltrD="" lastDt="">
-        <results />
-      </endpoint>
-      <endpoint ID="b2d47475-05a2-424c-9564-20c542a8d6f9" name="Get Orders - xml" status="0" url="/orders.xml" verb="GET" pFill="" fltrD="" lastDt="">
-        <results />
-      </endpoint>
-      <endpoint ID="906a4f74-30cf-4f85-8824-4ebf355353ce" name="Get Order #10000 - xml" status="0" url="/orders/{order}.xml" verb="GET" pFill="10000" fltrD="" lastDt="">
-        <results />
-      </endpoint>
-      <endpoint ID="7992e489-02b1-4214-8cd4-f9e75cb715f4" name="Get Products - xml" status="0" url="/products.json" verb="GET" pFill="" fltrD="" lastDt="">
-        <results />
-      </endpoint>
-      <endpoint ID="f4588032-d4e9-4e38-a8ce-e49e720839f1" name="Get Products - json" status="0" url="/products.json" verb="GET" pFill="" fltrD="" lastDt="">
-        <results />
-      </endpoint>
-    </endpoints>
-  </project>
-  <project ID="52c7cbe6-fa7c-4792-8dbd-776cb0f2c4e1" name="HttpBin" desc="" user="" pass="" baseURL="http://httpbin.org" status="0" lastDt="">
-    <endpoints>
-      <endpoint ID="5aa4ff01-3f7f-45be-8df8-ac592f25b2bd" name="Get" status="0" url="/get" verb="GET" pFill="" fltrD="" lastDt="">
-        <results />
-      </endpoint>
-      <endpoint ID="0c1fdf91-92bb-42ec-b0e0-d6a50d717e5d" name="Get XML" status="0" url="/xml" verb="GET" pFill="" fltrD="" lastDt="">
-        <results />
-      </endpoint>
-      <endpoint ID="491890d0-fb7d-43a3-8330-28bcfd2ed443" name="Get Origin IP" status="0" url="/ip" verb="GET" pFill="" fltrD="" lastDt="">
-        <results />
-      </endpoint>
-      <endpoint ID="cc4a1af7-b315-4fd1-a229-5171a80c44f5" name="1 Second Delay" status="0" url="/delay/{seconds}" verb="GET" pFill="1" fltrD="" lastDt="">
-        <results />
-      </endpoint>
-    </endpoints>
-  </project>
+	<project ID="52c7cbe6-fa7c-4792-8dbd-776cb0f2c4e1" name="HttpBin" desc="" user="" pass="" baseURL="http://httpbin.org" status="0" lastDt="">
+		<endpoints>
+			<endpoint ID="5aa4ff01-3f7f-45be-8df8-ac592f25b2bd" name="Get" status="0" url="/get" verb="GET" pFill="" fltrD="" lastDt="">
+				<results />
+			</endpoint>
+			<endpoint ID="0c1fdf91-92bb-42ec-b0e0-d6a50d717e5d" name="Get XML" status="0" url="/xml" verb="GET" pFill="" fltrD="" lastDt="">
+				<results />
+			</endpoint>
+			<endpoint ID="491890d0-fb7d-43a3-8330-28bcfd2ed443" name="Get Origin IP" status="0" url="/ip" verb="GET" pFill="" fltrD="" lastDt="">
+				<results />
+			</endpoint>
+			<endpoint ID="cc4a1af7-b315-4fd1-a229-5171a80c44f5" name="1 Second Delay" status="0" url="/delay/{seconds}" verb="GET" pFill="1" fltrD="" lastDt="">
+				<results />
+			</endpoint>
+			<endpoint ID="860beca1-efaa-440c-9b46-b94d7f2253ef" name="Get Cookies" status="0" url="/cookies" verb="GET" pFill="" fltrD="" lastDt="">
+				<results />
+			</endpoint>
+		</endpoints>
+	</project>
 </projects>

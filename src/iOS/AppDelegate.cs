@@ -43,12 +43,6 @@ namespace Spaniel.iOS
             #endif
 
 
-            // trying out the continuous code plugin
-//            #if DEBUG
-//                new Continuous.Server.HttpServer(this).Run();
-//            #endif
-
-
             // iOS project plist is set to hide status bar on app load, this will display it again
             UIApplication.SharedApplication.StatusBarHidden = false;
 
@@ -118,22 +112,26 @@ namespace Spaniel.iOS
 
         public override void DidEnterBackground(UIApplication uiApplication)
         {
-            // TODO: small issue with these quick actions
-            // the results aren't being displayed on the ProjectList page or when you go back to the EndPointList page from visiting the ProjectListPage
+            // ShortcutItems are only available on iOS 9 and newer
+            if (UIDevice.CurrentDevice.CheckSystemVersion(9, 0))
+            {
+                // TODO: small issue with these quick actions
+                // the results aren't being displayed on the ProjectList page or when you go back to the EndPointList page from visiting the ProjectListPage
 
-            // Add a dynamic quick action for each project
-            var ds = App.DependencyServiceWrapperProperty;
-            var projects = DataAccess.Load(ds);
+                // Add a dynamic quick action for each project
+                var ds = App.DependencyServiceWrapperProperty;
+                var projects = DataAccess.Load(ds);
 
-            var shortcutList = projects.Select(x => new UIApplicationShortcutItem(
-                runAllEndpointsShortcutItemType,
-                x.Name,
-                $"Run all {x.EndPoints.Count} endpoints",
-                UIApplicationShortcutIcon.FromType(UIApplicationShortcutIconType.Play),
-                new NSDictionary<NSString, NSObject>()
-            ));
+                var shortcutList = projects.Select(x => new UIApplicationShortcutItem(
+                    runAllEndpointsShortcutItemType,
+                    x.Name,
+                    $"Run all {x.EndPoints.Count} endpoints",
+                    UIApplicationShortcutIcon.FromType(UIApplicationShortcutIconType.Play),
+                    new NSDictionary<NSString, NSObject>()
+                ));
 
-            uiApplication.ShortcutItems = shortcutList.ToArray();
+                uiApplication.ShortcutItems = shortcutList.ToArray();
+            }
         }
 
         public override async void PerformActionForShortcutItem(UIApplication application, UIApplicationShortcutItem shortcutItem, UIOperationHandler completionHandler)
