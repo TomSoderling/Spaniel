@@ -5,9 +5,7 @@
 	<key>CFBundleIdentifier</key>
 	<string>com.tomsoderling.Spaniel</string>
 	<key>CFBundleShortVersionString</key>
-	<string>1.2</string>
-	<key>CFBundleVersion</key>
-	<string>1.2</string>
+	<string>1.0</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
 	<key>MinimumOSVersion</key>
@@ -110,5 +108,7 @@
 	<string>Spaniel</string>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
+	<key>CFBundleVersion</key>
+	<string>0</string>
 </dict>
 </plist>
