@@ -109,11 +109,7 @@ namespace Spaniel
         {
             base.OnResume();
 
-            // Keep track of when the user opens the app
-            // TODO: log this with App Center             //Insights.Track("AppOpened");
-
-
-            // is there a way to Track how many Projects and EndPoints here?
+            // TODO: is there a way to Track how many Projects and Endpoints here?
         }
     }
 }

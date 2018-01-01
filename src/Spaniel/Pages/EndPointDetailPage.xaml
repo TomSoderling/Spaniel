@@ -6,7 +6,7 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
     ios:Page.UseSafeArea="true"
     x:Class="Spaniel.Pages.EndPointDetailPage"
-	Title="EndPoint Details">
+	Title="Endpoint Details">
 
 	<ContentPage.ToolbarItems>
         <ToolbarItem x:Name="toolbarButton" Order="Primary" Text="{Binding ToolbarButtonText}" Command="{Binding RunOrSave}" StyleId="endPointDetailToolbarButton" />
@@ -54,7 +54,7 @@
 	    		</Grid>
     		</StackLayout>
 
-    		<!-- EndPoint Details Grid -->
+    		<!-- Endpoint Details Grid -->
 			<Grid x:Name="endPointDetailsGrid" BindingContext="{Binding SelectedEndPoint}">
 				<Grid.Style>
 					<OnIdiom x:TypeArguments="Style" Tablet="{StaticResource EndPointDetailsGrid}" Phone="{StaticResource EndPointDetailsGrid_Phone}" />

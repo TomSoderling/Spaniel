@@ -7,7 +7,7 @@ namespace Spaniel.Controls
         /// <summary>
         /// Bindable property for the color of the progress bar.
         /// </summary>
-        public static BindableProperty ProgressBarColor = BindableProperty.Create<ColoredProgressBar, Color>(p => p.BarColor, default(Color));
+        public static BindableProperty ProgressBarColor = BindableProperty.Create(nameof(BarColor), typeof(Color), typeof(ColoredProgressBar), default(Color));
 
         /// <summary>
         /// Gets or sets the color of the progress bar.
@@ -15,7 +15,7 @@ namespace Spaniel.Controls
         public Color BarColor
         {
             get 
-            { 
+            {
                 return (Color)GetValue(ProgressBarColor); 
             }
             set 
@@ -28,7 +28,7 @@ namespace Spaniel.Controls
         /// <summary>
         /// Bindable property for the color of the track behind the progress bar.
         /// </summary>
-        public static BindableProperty ProgressBarTrackColor = BindableProperty.Create<ColoredProgressBar, Color>(p => p.TrackColor, default(Color));
+        public static BindableProperty ProgressBarTrackColor = BindableProperty.Create(nameof(TrackColor), typeof(Color), typeof(ColoredProgressBar), default(Color));
 
         /// <summary>
         /// Gets or sets the color of the track behind the progress bar.

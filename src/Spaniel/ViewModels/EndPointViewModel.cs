@@ -279,13 +279,13 @@ namespace Spaniel.ViewModels
         #region Command Implementations
 
         /// <summary>
-        /// Add or run an EndPoint
+        /// Add or run an Endpoint
         /// </summary>
         private async Task OnActionMenu()
         {
-            const string addActionText = "Add EndPoint";
-            const string runAction = "Run All EndPoints";
-            const string runActionFiltered = "Run Select EndPoints";
+            const string addActionText = "Add Endpoint";
+            const string runAction = "Run All Endpoints";
+            const string runActionFiltered = "Run Select Endpoints";
             const string deleteResultsAction = "Clear All Results";
             const string exportProjectAction = "Export This Project";
             string runActionText = runAction;
@@ -313,7 +313,7 @@ namespace Spaniel.ViewModels
                         Status = TestStatus.Untested,
                     };
 
-                    // Add it to the collection of EndPoints
+                    // Add it to the collection of Endpoints
                     EndPoints.Add(SelectedEndPoint);
                     RaisePropertyChanged("FilteredEndPoints"); // let UI know to update list
 
@@ -325,7 +325,7 @@ namespace Spaniel.ViewModels
                     break;
 
                 case deleteResultsAction:
-                    // Delete results for all EndPoints in this Project, reset statuses and test dates
+                    // Delete results for all Endpoints in this Project, reset statuses and test dates
                     foreach (var endPoint in SelectedProject.EndPoints)
                     {
                         endPoint.Status = TestStatus.Untested;
@@ -382,7 +382,7 @@ namespace Spaniel.ViewModels
             {
                 // Alert user for confirmation first 
                 var messageService = dependencyService.Get<IMessageVisualizerService>();
-                deleteEndPoint = await messageService.ShowMessageAsync("Are you sure?", "Are you sure you want to delete end point: " + endPoint.Name + "?", "Yes", "No");
+                deleteEndPoint = await messageService.ShowMessageAsync("Are you sure?", "Are you sure you want to delete endpoint: " + endPoint.Name + "?", "Yes", "No");
             }
 
             if (deleteEndPoint)
@@ -419,7 +419,7 @@ namespace Spaniel.ViewModels
             {
                 // Alert user if device is offline
                 var messageService = dependencyService.Get<IMessageVisualizerService>();
-                await messageService.ShowMessageAsync("No Network Connection", "Unable to run EndPoint tests while offline", "OK");
+                await messageService.ShowMessageAsync("No Network Connection", "Unable to run endpoint tests while offline", "OK");
             }
             else
             {
@@ -498,7 +498,7 @@ namespace Spaniel.ViewModels
             {
                 // Alert user if device is offline
                 var messageService = dependencyService.Get<IMessageVisualizerService>();
-                await messageService.ShowMessageAsync("No Network Connection", "Unable to run EndPoint tests while offline", "OK");
+                await messageService.ShowMessageAsync("No Network Connection", "Unable to run endpoint tests while offline", "OK");
             }
             else
             {

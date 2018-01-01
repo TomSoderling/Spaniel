@@ -82,7 +82,7 @@ namespace Spaniel.Services
                         else
                         {
                             var masterDetailPage = (MasterDetailPage)Application.Current.MainPage;
-                            masterDetailPage.Master.Title = "EndPoints";
+                            masterDetailPage.Master.Title = "Endpoints";
 
                             await masterDetailPage.Master.Navigation.PushAsync(endPointListPage);
                             await GoToRootDetailPageAsync(); // clear whatever may be on the detail page

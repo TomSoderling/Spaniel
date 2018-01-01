@@ -70,14 +70,14 @@
 			</Style>
 
 
-			<!-- Style for the EndPoint Details Grid -->
+			<!-- Style for the Endpoint Details Grid -->
 			<Style x:Key="EndPointDetailsGrid" TargetType="Grid" >
 				<Setter Property="RowSpacing" Value="6" />
 				<Setter Property="Padding" Value="40, 24, 40, 24" />
 			</Style>
 
 
-			<!-- Style for the EndPoint Results List -->
+			<!-- Style for the Endpoint Results List -->
 			<Style x:Key="EndPointResultListStackLayout" TargetType="StackLayout">
 				<Setter Property="Padding" Value="40, 0, 40, 0" />
 			</Style>
