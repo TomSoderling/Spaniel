@@ -1,5 +1,5 @@
 # Spaniel
-Spaniel is a Xamarin.Forms app for iOS and Android to help run health checkups on your RESTful web service endpoints. It's written using the MVVM pattern, and without any extra frameworks.  I wrote the app while going through the MVVM class in Xamarin.University (XAM320 which I'd highly recommend) so the architecture is closely modeled after that.
+Spaniel is a MVVM Xamarin.Forms app for iOS and Android to help run health checkups on your RESTful web service endpoints.  I wrote the app while going through the MVVM class in Xamarin University (XAM320 which I'd highly recommend) so the architecture is closely modeled after that.
 
 
 ### Features
