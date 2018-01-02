@@ -2,6 +2,8 @@
 Spaniel is a MVVM Xamarin.Forms app for iOS and Android to help run health checkups on your RESTful web service endpoints.  I wrote the app while going through the MVVM class in Xamarin University (XAM320 which I'd highly recommend) so the architecture is closely modeled after that.
 
 
+<img src="App%20Store%20Screenshots/iOS/5.8%20inch%20-%20X/Simulator%20Screen%20Shot%20-%20iPhone%20X%20-%202017-12-29%20at%2015.18.45.png" width="160" title="Project list page">  <img src="App%20Store%20Screenshots/iOS/5.8%20inch%20-%20X/Simulator%20Screen%20Shot%20-%20iPhone%20X%20-%202017-12-29%20at%2015.19.03.png" width="160" title="Endpoint list page">  <img src="App%20Store%20Screenshots/iOS/5.8%20inch%20-%20X/Simulator%20Screen%20Shot%20-%20iPhone%20X%20-%202017-12-29%20at%2015.19.14.png" width="160" title="Endpoint details page">  <img src="App%20Store%20Screenshots/iOS/5.8%20inch%20-%20X/Simulator%20Screen%20Shot%20-%20iPhone%20X%20-%202017-12-29%20at%2015.19.28.png" width="160" title="Result details page">  <img src="App%20Store%20Screenshots/iOS/5.8%20inch%20-%20X/IMG_F571D813B3B7-1.jpeg" width="160" title="Share sheet">
+
 ### Features
  - Standard layout for phone and master-detail layout for tablet devices
  - Quick actions for devices that support 3D Touch
@@ -34,9 +36,9 @@ Add a base URL for your project and then specify the endpoints to test. Run the 
 
 
 ### Feature Wishlist
- - Support for more REST verbs
- - Support for secure endpoints through authentication or tokens
- - Supply a expected response for each endpoint so they can be validated (maybe)
+ - [ ] Support for more REST verbs
+ - [ ] Support for secure endpoints through authentication or tokens
+ - [ ] Supply a expected response for each endpoint so they can be validated (maybe)
 
 
 ## Build Status 
