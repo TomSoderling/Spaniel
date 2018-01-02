@@ -1,7 +1,5 @@
 # Spaniel
-Spaniel is a Xamarin.Forms app for iOS and Android to help run health checkups on your RESTful web service endpoints.  
-
-Add a base URL for your project and then specify the endpoints to test. Run the endpoints to ensure they're up, healthy, and returning responses that you expect.
+Spaniel is a Xamarin.Forms app for iOS and Android to help run health checkups on your RESTful web service endpoints. It's written using the MVVM pattern, and without any extra frameworks.  I wrote the app while going through the MVVM class in Xamarin.University (XAM320 which I'd highly recommend) so the architecture is closely modeled after that.
 
 
 ### Features
@@ -16,14 +14,18 @@ Add a base URL for your project and then specify the endpoints to test. Run the 
  - Response bodies are cleaned up to save space whenever the app is backgrounded.
 
 
+### Directions
+Add a base URL for your project and then specify the endpoints to test. Run the endpoints to ensure they're up, healthy, and returning responses that you expect.
+
+
 ### Known Limitations 
  - Currently, only GET requests are supported - HttpClient.GetAsync()
 
-#### iOS
+#### iOS:
  - Endpoint results from quick actions disappear after going back to ProjectList page and stay gone till app is force-closed
  - LaunchScreen.storyboard image on iPad doesn’t look too hot
  
-#### Android
+#### Android:
  - Styling needs a bit of love still
  - Need to test on a tablet device
  - Exporting a project only works with some apps (Google Drive)
