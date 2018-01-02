@@ -33,6 +33,12 @@ Add a base URL for your project and then specify the endpoints to test. Run the 
  - Sometimes get this exception which causes an app crash, but don't know where it's coming from: Cannot access a disposed object. Object name: 'Xamarin.Forms.Platform.Android.TextCellRenderer+TextCellView'
 
 
+### Feature Wishlist
+ - Support for more REST verbs
+ - Support for secure endpoints through authentication or tokens
+ - Supply a expected response for each endpoint so they can be validated (maybe)
+
+
 ## Build Status 
 | iOS           | Android       |
 | ------------- | ------------- |
