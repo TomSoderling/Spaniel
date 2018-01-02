@@ -3,16 +3,6 @@ Spaniel is a Xamarin.Forms app for iOS and Android to help run health checkups o
 
 Add a base URL for your project and then specify the endpoints to test. Run the endpoints to ensure they're up, healthy, and returning responses that you expect.
 
-• Supports requests that use the GET verb
-• See details from each HTTP response: status code, time, body
-• Run the endpoints all together, individually, or by search filter
-• Provide parameter values and filter definitions for each endpoint if desired
-• Ability to export a project as a .spaniel file and share via AirDrop, Email, or other apps and import into Spaniel on other devices
-• Handy swipe context actions to duplicate or delete endpoints, or edit a project's settings
-• Get up and running quickly! App comes pre-loaded with a project to test the HttpBin.org base URL and several of its endpoints as examples
-
-Response bodies are cleaned up to save space whenever the app is backgrounded.
-
 
 ### Features
  - Standard layout for phone and master-detail layout for tablet devices
