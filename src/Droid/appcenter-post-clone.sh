@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-# Insert the iOS App Center Secret into ApiKeys.cs file
+# Insert the Android App Center Secret into ApiKeys.cs file
 
 set -e # Exit immediately if a command exits with a non-zero status (failure)
 
@@ -14,7 +14,7 @@ filename="$PWD/../Spaniel/ApiKeys.cs"
 stringToFind="\[your iOS App Center secret goes here\]"
 
 # 3.) The secret it will be replaced with
-AppCenterSecret=$AppCenterSecretiOS # this is set up in the App Center build config
+AppCenterSecret=$AppCenterSecretAndroid # create this environment variable in your App Center build config
 
 ##################################################
 
