@@ -1,13 +1,10 @@
 #!/usr/bin/env bash
 
 # Insert the iOS App Center Secret into ApiKeys.cs file
+
 set -e # Exit immediately if a command exits with a non-zero status (failure)
 
-# TEST
-# AppCenterSecretiOS="ios=8e88ba66-ca1e-4bfe-a0ed-8cba1480f183;"
-# TEST
-
-filename="$PWD/../Spaniel/ApiKeys.cs"
+filename="$PWD/../Spaniel/ApiKeys.cs" # target file
 
 echo "        Working directory:" $PWD
 echo "Secret from env variables:" $AppCenterSecretiOS
