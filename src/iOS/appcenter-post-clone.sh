@@ -6,13 +6,17 @@ set -e # Exit immediately if a command exits with a non-zero status (failure)
 
 filename="$PWD/../Spaniel/ApiKeys.cs" # target file
 
+echo "*****************************************************************************"
+echo "App Center Secret Inserter"
+echo "*****************************************************************************"
 echo "        Working directory:" $PWD
-echo "Secret from env variables:" $AppCenterSecretiOS
+echo "Secret from env variables:" $AppCenterSecretiOS # this is set up in the App Center build config
 echo "              Target file:" $filename
+echo "*****************************************************************************"
 echo ""
 
 
-# Check if file exists
+# Check if file exists first
 if [ -e $filename ]
 then
     echo "Target file found"
@@ -44,6 +48,8 @@ then
     #   s: substitute pattern2 ($AppCenterSecretiOS) for first instance of pattern1 ($stringToFind) in a line
     cat $filename | sed -i -e "s/$stringToFind/$AppCenterSecretiOS/" $filename
 
+    echo "App secret inserted"
+
     break # found the line, so break out of loop
 fi
 done < "$filename"
@@ -54,3 +60,7 @@ then
     echo "Unable to find match for:" $stringToFind
     exit 1 # exit with unspecified error code.
 fi
+
+echo "*****************************************************************************"
+echo "Script complete"
+echo "*****************************************************************************"
