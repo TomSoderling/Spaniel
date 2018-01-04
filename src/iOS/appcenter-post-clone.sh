@@ -52,7 +52,8 @@ matchFound=false # flag to indicate we found a match
 while IFS= read -r line; do
 if [[ $line == *$stringToFind* ]]
 then
-    echo "Line found:" $line
+    # echo "Line found:" $line
+    echo "Line found"
     matchFound=true
 
     # Edit the file and replace the found text with the Secret text
@@ -75,6 +76,7 @@ then
     exit 1 # exit with unspecified error code.
 fi
 
+echo ""
 echo "**************************************************************************************************"
 echo "Script complete"
 echo "**************************************************************************************************"
