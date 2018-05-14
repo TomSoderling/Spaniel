@@ -4,7 +4,6 @@ namespace Spaniel.Shared
     public static class Constants
     {
         // API Keys
-        public const string InsightsApiKey = "d99f9c0e3c9740463602a17773a5f24a2fa4373a";
         public const string TestCloudApiKey = "07f728d967e1fdc85bf75810e611d5c0"; // this enables the app to be tested on device as well as in test could
 
 
