@@ -3,7 +3,7 @@ namespace Spaniel
 {
     // Changes to this file are ignored so API keys won't be checked in to github. Used command:
     // git update-index --assume-unchanged [path to file]
-    // To undo:
+    // To undo for release branch:
     // git update-index --no-assume-unchanged [path to file]
     public static class ApiKeys
     {
